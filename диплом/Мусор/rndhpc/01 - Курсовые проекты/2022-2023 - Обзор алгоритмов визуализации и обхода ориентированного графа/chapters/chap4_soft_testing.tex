@@ -1,0 +1,79 @@
+%----------------------------------------------------------
+\chapter{Тестирование и отладка}\label{chap4_soft_testing}
+%----------------------------------------------------------
+\section{Экспорт графа в aDOT файл}
+Для тестировании основная функционал и экспорта в файл с помощью доступных инструментов сделаем граф показанный на рисунке(\ref{g1}).
+
+В результате должен получиться файл с описание графовой модели в формате aDOT представленным на листинге (\ref{l1}).
+\begin{lstlisting}[label=l1, caption={\textit{Полученное описание графовой модели в формате aDOT}}]
+digraph TEST
+{
+// Parallelism
+s1 [parallelism=threading]
+s2 [parallelism=threading]
+// Function
+f1 [module=f1_module, entry_func=f1_function]
+// Predicates
+p1 [module=p1_module, entry_func=p1_function]
+// Transition
+edge_1 [predicate=p1, function=f1]
+// Graph model
+__BEGIN__ -> s1
+s1 => s2 [morphism=edge_1]
+s1 => s3 [morphism=edge_1]
+s2 => s4 [morphism=edge_1]
+s2 => s5 [morphism=edge_1]
+s3 -> s7 [morphism=edge_1]
+s4 -> s6 [morphism=edge_1]
+s5 -> s6 [morphism=edge_1]
+s6 -> s9 [morphism=edge_1]
+s7 -> s8 [morphism=edge_1]
+s8 -> s9 [morphism=edge_1]
+s9 -> __END__
+}
+\end{lstlisting}
+
+\section{Импорт из aDOT файла}
+Тестирование производится путём импорта файла из предыдущего пункта. В случае успешного выполнения получится граф представленный на рисунке (\ref{g2}). Стоит отметить, что внешний вид изменится за счёт применения алгоритма визуализации.
+
+\section{Тестирование циклов в графе}
+В описание графовой модели на предыдущем шаге добавим несколько циклов и обратных ребер. Получим следующее описание графовой модели представленное на листинге (\ref{l2}).
+\begin{lstlisting}[label=l2, caption={\textit{ Пример описание графовой модели в формате aDOT включающей циклы}}]
+digraph TEST
+{
+// Parallelism
+s7 [parallelism=threading]
+s11 [parallelism=threading]
+s2 [parallelism=threading]
+s10 [parallelism=threading]
+s1 [parallelism=threading]
+// Function
+f1 [module=f1_module, entry_func=f1_function]
+// Predicates
+p1 [module=p1_module, entry_func=p1_function]
+// Transition
+edge_1 [predicate=p1, function=f1]
+// Graph model
+__BEGIN__ -> s1
+s4 -> s6 [morphism=edge_1]
+s5 -> s6 [morphism=edge_1]
+s7 => s6 [morphism=edge_1]
+s7 => s1 [morphism=edge_1]
+s11 => s8 [morphism=edge_1]
+s11 => s2 [morphism=edge_1]
+s12 -> s8 [morphism=edge_1]
+s2 => s4 [morphism=edge_1]
+s2 => s5 [morphism=edge_1]
+s2 => s7 [morphism=edge_1]
+s10 => s11 [morphism=edge_1]
+s10 => s12 [morphism=edge_1]
+s1 => s2 [morphism=edge_1]
+s1 => s10 [morphism=edge_1]
+s6 -> s9 [morphism=edge_1]
+s8 -> s9 [morphism=edge_1]
+s9 -> s6 [morphism=edge_1]
+s9 -> __END__
+}
+\end{lstlisting}
+
+В случае успешной загрузки графа получим модель графа, представленной на рисунке (\ref{g3}).
