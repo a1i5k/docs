@@ -1,0 +1,68 @@
+[column2, column3, column5, column7, column8] --> column10
+[column1, column13, column2, column3, column5, column7] --> column12
+[column15, column3, column5, column7, column8] --> column10, column9
+[column10, column14, column3, column5, column7] --> column9
+[column14, column3, column5, column7, column8] --> column9
+[column12, column3, column5, column7, column8] --> column9
+[column13, column3, column5, column7, column8] --> column10, column9
+[column11, column3, column5, column7, column8] --> column9
+[column1, column13, column3, column5, column7, column8] --> column6
+[column10, column13, column14, column2, column3, column7] --> column9
+[column1, column14, column2, column3, column7] --> column9
+[column1, column13, column2, column3, column7] --> column9
+[column10, column13, column14, column15, column3, column7] --> column9
+[column13, column14, column3, column7, column8] --> column9
+[column1, column15, column3, column7] --> column9
+[column1, column3, column7, column8] --> column10, column9
+[column1, column11, column13, column3, column7, column8] --> column6
+[column2, column3, column4, column7, column8] --> column10
+[column1, column13, column2, column3, column4, column7] --> column12
+[column15, column3, column4, column7, column8] --> column10, column9
+[column10, column14, column3, column4, column7] --> column9
+[column14, column3, column4, column7, column8] --> column9
+[column12, column3, column4, column7, column8] --> column9
+[column13, column3, column4, column7, column8] --> column10, column9
+[column11, column3, column4, column7, column8] --> column9
+[column1, column13, column3, column4, column7, column8] --> column6
+[column3, column5, column6, column7, column8] --> column10
+[column13, column14, column3, column6, column7] --> column9
+[column1, column3, column6, column7] --> column10, column9
+[column3, column4, column6, column7, column8] --> column10
+[column5] --> column4
+[column11, column13, column15, column2, column3, column5, column8] --> column10
+[column11, column13, column2, column3, column5, column8, column9] --> column10
+[column11, column12, column13, column2, column3, column5, column8] --> column10
+[column1, column15, column3, column5] --> column9
+[column1, column3, column5, column8] --> column10, column9
+[column1, column14, column3, column5] --> column9
+[column1, column13, column3, column5] --> column9
+[column1, column3, column8, column9] --> column10
+[column1, column14, column3, column8] --> column10
+[column1, column13, column3, column8] --> column10
+[column4] --> column5
+[column11, column13, column15, column2, column3, column4, column8] --> column10
+[column11, column13, column2, column3, column4, column8, column9] --> column10
+[column11, column12, column13, column2, column3, column4, column8] --> column10
+[column1, column15, column3, column4] --> column9
+[column1, column3, column4, column8] --> column10, column9
+[column1, column14, column3, column4] --> column9
+[column1, column13, column3, column4] --> column9
+[column10, column14, column15, column2, column3, column5, column6, column8] --> column9
+[column10, column12, column15, column2, column3, column5, column6, column8] --> column9
+[column10, column12, column14, column2, column3, column5, column6, column8] --> column9
+[column13, column15, column2, column3, column5, column6, column8] --> column9
+[column13, column2, column3, column5, column6, column8] --> column10
+[column13, column14, column2, column3, column5, column6, column8] --> column9
+[column11, column13, column14, column3, column5, column6, column8] --> column9
+[column11, column12, column13, column15, column3, column5, column6, column8] --> column9
+[column1, column3, column5, column6] --> column10, column9
+[column1, column14, column2, column3, column6] --> column9
+[column10, column14, column15, column2, column3, column4, column6, column8] --> column9
+[column10, column12, column15, column2, column3, column4, column6, column8] --> column9
+[column10, column12, column14, column2, column3, column4, column6, column8] --> column9
+[column13, column15, column2, column3, column4, column6, column8] --> column9
+[column13, column2, column3, column4, column6, column8] --> column10
+[column13, column14, column2, column3, column4, column6, column8] --> column9
+[column11, column13, column14, column3, column4, column6, column8] --> column9
+[column11, column12, column13, column15, column3, column4, column6, column8] --> column9
+[column1, column3, column4, column6] --> column10, column9

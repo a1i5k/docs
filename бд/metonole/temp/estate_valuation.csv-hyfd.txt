@@ -1,0 +1,16 @@
+[X2 house age, X5 latitude, Y house price of unit area] --> X1 transaction date
+[X1 transaction date, X2 house age, X5 latitude] --> X3 distance to the nearest MRT station, X4 number of convenience stores, X6 longitude
+[X5 latitude, Y house price of unit area] --> X3 distance to the nearest MRT station, X4 number of convenience stores, X6 longitude
+[X1 transaction date, X5 latitude, Y house price of unit area] --> X2 house age
+[X1 transaction date, X4 number of convenience stores, X5 latitude] --> X3 distance to the nearest MRT station, X6 longitude
+[X1 transaction date, X2 house age, Y house price of unit area] --> X3 distance to the nearest MRT station, X4 number of convenience stores, X5 latitude, X6 longitude
+[X2 house age, X3 distance to the nearest MRT station, Y house price of unit area] --> X1 transaction date
+[X3 distance to the nearest MRT station] --> X4 number of convenience stores, X5 latitude, X6 longitude
+[X1 transaction date, X3 distance to the nearest MRT station, Y house price of unit area] --> X2 house age
+[X2 house age, X4 number of convenience stores, Y house price of unit area] --> X1 transaction date, X3 distance to the nearest MRT station, X5 latitude, X6 longitude
+[X5 latitude, X6 longitude] --> X3 distance to the nearest MRT station, X4 number of convenience stores
+[X2 house age, X6 longitude] --> X3 distance to the nearest MRT station, X4 number of convenience stores, X5 latitude
+[X2 house age, X6 longitude, Y house price of unit area] --> X1 transaction date
+[X6 longitude, Y house price of unit area] --> X4 number of convenience stores
+[X1 transaction date, X6 longitude, Y house price of unit area] --> X2 house age, X3 distance to the nearest MRT station, X5 latitude
+[X1 transaction date, X4 number of convenience stores, X6 longitude] --> X3 distance to the nearest MRT station, X5 latitude

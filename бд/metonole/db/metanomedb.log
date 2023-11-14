@@ -1,0 +1,3 @@
+/*C3*/SET SCHEMA PUBLIC
+alter table execution drop constraint UK_lyajh8vurol2rfuk9e6ju2lu3
+alter table execution add constraint UK_lyajh8vurol2rfuk9e6ju2lu3  unique (algorithm, begin)
