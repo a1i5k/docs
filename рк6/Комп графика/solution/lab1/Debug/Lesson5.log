@@ -1,4 +1,0 @@
-﻿cl : командная строка warning D9035: использование параметра "Gm" нежелательно, он будет удален в следующих выпусках
-  nehe-ogl06.cpp
-c:\users\a1i5k\desktop\учёба\комп графика\solution\lab1\nehe-ogl06.cpp(340): warning C4838: преобразование из "int" в "BYTE" требует сужающего преобразования
-  Lesson5.vcxproj -> C:\Users\A1i5k\Desktop\Учёба\Комп графика\solution\lab1\.\Debug\lesson5.exe
