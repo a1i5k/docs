@@ -1,0 +1,2915 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?validation-md5-digest b6de3c9340944290010378b92c6b9001?>
+<worksheet version="3.0.3" xmlns="http://schemas.mathsoft.com/worksheet30" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ws="http://schemas.mathsoft.com/worksheet30" xmlns:ml="http://schemas.mathsoft.com/math30" xmlns:u="http://schemas.mathsoft.com/units10" xmlns:p="http://schemas.mathsoft.com/provenance10" xmlns:prd="http://schemas.mathsoft.com/point-release-data">
+	<pointReleaseData/>
+	<metadata>
+		<generator>Mathcad Professional 14.0</generator>
+		<userData>
+			<title/>
+			<description/>
+			<author>Admin</author>
+			<company>Parametric Technology Corporation</company>
+			<keywords/>
+			<revisedBy>Пользователь Windows</revisedBy>
+		</userData>
+		<identityInfo>
+			<revision>1</revision>
+			<documentID>A9C0DAB9-ED89-40EF-AE0E-ABA26501404F</documentID>
+			<versionID>3BF3F281-47B1-4FD8-BC82-057CC31D7DC1</versionID>
+			<parentVersionID>00000000-0000-0000-0000-000000000000</parentVersionID>
+			<branchID>00000000-0000-0000-0000-000000000000</branchID>
+		</identityInfo>
+	</metadata>
+	<settings>
+		<presentation>
+			<textRendering>
+				<textStyles>
+					<textStyle name="Normal">
+						<blockAttr margin-left="0" margin-right="0" text-indent="inherit" text-align="left" list-style-type="inherit" tabs="inherit"/>
+						<inlineAttr font-family="Arial" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false" line-through="false" vertical-align="baseline"/>
+					</textStyle>
+					<textStyle name="Heading 1">
+						<blockAttr margin-left="0" margin-right="0" text-indent="inherit" text-align="left" list-style-type="inherit" tabs="inherit"/>
+						<inlineAttr font-family="Arial" font-charset="0" font-size="14" font-weight="bold" font-style="normal" underline="false" line-through="false" vertical-align="baseline"/>
+					</textStyle>
+					<textStyle name="Heading 2">
+						<blockAttr margin-left="0" margin-right="0" text-indent="inherit" text-align="left" list-style-type="inherit" tabs="inherit"/>
+						<inlineAttr font-family="Arial" font-charset="0" font-size="12" font-weight="bold" font-style="italic" underline="false" line-through="false" vertical-align="baseline"/>
+					</textStyle>
+					<textStyle name="Heading 3">
+						<blockAttr margin-left="0" margin-right="0" text-indent="inherit" text-align="left" list-style-type="inherit" tabs="inherit"/>
+						<inlineAttr font-family="Arial" font-charset="0" font-size="12" font-weight="normal" font-style="normal" underline="false" line-through="false" vertical-align="baseline"/>
+					</textStyle>
+					<textStyle name="Paragraph">
+						<blockAttr margin-left="0" margin-right="0" text-indent="21" text-align="left" list-style-type="inherit" tabs="inherit"/>
+						<inlineAttr font-family="Arial" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false" line-through="false" vertical-align="baseline"/>
+					</textStyle>
+					<textStyle name="List">
+						<blockAttr margin-left="14.25" margin-right="0" text-indent="-14.25" text-align="left" list-style-type="inherit" tabs="inherit"/>
+						<inlineAttr font-family="Arial" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false" line-through="false" vertical-align="baseline"/>
+					</textStyle>
+					<textStyle name="Indent">
+						<blockAttr margin-left="108" margin-right="0" text-indent="inherit" text-align="left" list-style-type="inherit" tabs="inherit"/>
+						<inlineAttr font-family="Arial" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false" line-through="false" vertical-align="baseline"/>
+					</textStyle>
+					<textStyle name="Title">
+						<blockAttr margin-left="0" margin-right="0" text-indent="inherit" text-align="center" list-style-type="inherit" tabs="inherit"/>
+						<inlineAttr font-family="Times New Roman" font-charset="0" font-size="24" font-weight="bold" font-style="normal" underline="false" line-through="false" vertical-align="baseline"/>
+					</textStyle>
+					<textStyle name="Subtitle" base-style="Title">
+						<blockAttr margin-left="0" margin-right="0" text-indent="inherit" text-align="center" list-style-type="inherit" tabs="inherit"/>
+						<inlineAttr font-family="Times New Roman" font-charset="0" font-size="18" font-weight="normal" font-style="normal" underline="false" line-through="false" vertical-align="baseline"/>
+					</textStyle>
+				</textStyles>
+			</textRendering>
+			<mathRendering equation-color="#000">
+				<operators multiplication="narrow-dot" derivative="derivative" literal-subscript="large" definition="colon-equal" global-definition="triple-equal" local-definition="left-arrow" equality="bold-equal" symbolic-evaluation="right-arrow"/>
+				<mathStyles>
+					<mathStyle name="Variables" font-family="Times New Roman" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false"/>
+					<mathStyle name="Constants" font-family="Times New Roman" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false"/>
+					<mathStyle name="User 1" font-family="Arial" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false"/>
+					<mathStyle name="User 2" font-family="Courier New" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false"/>
+					<mathStyle name="User 3" font-family="Arial" font-charset="0" font-size="10" font-weight="bold" font-style="normal" underline="false"/>
+					<mathStyle name="User 4" font-family="Times New Roman" font-charset="0" font-size="10" font-weight="normal" font-style="italic" underline="false"/>
+					<mathStyle name="User 5" font-family="Times New Roman" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false"/>
+					<mathStyle name="User 6" font-family="Arial" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false"/>
+					<mathStyle name="User 7" font-family="Times New Roman" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false"/>
+					<mathStyle name="Math Text Font" font-family="Times New Roman" font-charset="0" font-size="14" font-weight="normal" font-style="normal" underline="false"/>
+				</mathStyles>
+				<dimensionNames mass="mass" length="length" time="time" current="current" thermodynamic-temperature="temperature" luminous-intensity="luminosity" amount-of-substance="substance" display="false"/>
+				<symbolics derivation-steps-style="vertical-insert" show-comments="false" evaluate-in-place="false"/>
+				<results numeric-only="true">
+					<general precision="3" show-trailing-zeros="false" radix="dec" complex-threshold="10" zero-threshold="15" imaginary-value="i" exponential-threshold="3"/>
+					<matrix display-style="auto" expand-nested-arrays="false"/>
+					<unit format-units="true" simplify-units="true" fractional-unit-exponent="false"/>
+				</results>
+			</mathRendering>
+			<pageModel show-page-frame="false" show-header-frame="false" show-footer-frame="false" header-footer-start-page="1" paper-code="9" orientation="portrait" print-single-page-width="false" page-width="595.5" page-height="842.25">
+				<margins left="86.4" right="86.4" top="86.4" bottom="86.4"/>
+				<header use-full-page-width="false"/>
+				<footer use-full-page-width="false"/>
+			</pageModel>
+			<colorModel background-color="#fff" default-highlight-color="#ffff80"/>
+			<language math="en" UI="en"/>
+		</presentation>
+		<calculation>
+			<builtInVariables array-origin="0" convergence-tolerance="0.001" constraint-tolerance="0.001" random-seed="1" prn-precision="4" prn-col-width="8"/>
+			<calculationBehavior automatic-recalculation="true" matrix-strict-singularity-check="true" optimize-expressions="false" exact-boolean="true" strings-use-origin="false" zero-over-zero="0">
+				<compatibility multiple-assignment="MC12" local-assignment="MC12"/>
+			</calculationBehavior>
+			<units>
+				<currentUnitSystem name="si" customized="false"/>
+			</units>
+		</calculation>
+		<editor view-annotations="false" view-regions="false">
+			<ruler is-visible="false" ruler-unit="cm"/>
+			<plotTemplate>
+				<xy item-idref="1"/>
+			</plotTemplate>
+			<grid granularity-x="6" granularity-y="6"/>
+		</editor>
+		<fileFormat image-type="image/png" image-quality="75" save-numeric-results="true" exclude-large-results="false" save-text-images="false" screen-dpi="96"/>
+		<miscellaneous>
+			<handbook handbook-region-tag-ub="166" can-delete-original-handbook-regions="true" can-delete-user-regions="true" can-print="true" can-copy="true" can-save="true" file-permission-mask="4294967295"/>
+		</miscellaneous>
+	</settings>
+	<regions>
+		<region region-id="1" left="12" top="9" width="54" height="12.75" align-x="52.5" align-y="18" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+			<math optimize="false" disable-calc="false">
+				<ml:define warning="WarnRedefinedUDScalar" xmlns:ml="http://schemas.mathsoft.com/math30">
+					<ml:id xml:space="preserve">ORIGIN</ml:id>
+					<ml:real>1</ml:real>
+				</ml:define>
+			</math>
+			<rendering item-idref="2"/>
+		</region>
+		<region region-id="77" left="84" top="9" width="54.75" height="12.75" align-x="113.25" align-y="18" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+			<math optimize="false" disable-calc="false">
+				<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+					<ml:id xml:space="preserve">Dmin</ml:id>
+					<ml:real>0.01</ml:real>
+				</ml:define>
+			</math>
+			<rendering item-idref="3"/>
+		</region>
+		<region region-id="153" left="156" top="9" width="48" height="12.75" align-x="186" align-y="18" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+			<math optimize="false" disable-calc="false">
+				<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+					<ml:id xml:space="preserve">Dmax</ml:id>
+					<ml:real>50</ml:real>
+				</ml:define>
+			</math>
+			<rendering item-idref="4"/>
+		</region>
+		<region region-id="154" left="216" top="9" width="39.75" height="12.75" align-x="237.75" align-y="18" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+			<math optimize="false" disable-calc="false">
+				<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+					<ml:id xml:space="preserve">ND</ml:id>
+					<ml:real>20</ml:real>
+				</ml:define>
+			</math>
+			<rendering item-idref="5"/>
+		</region>
+		<region region-id="160" left="306" top="9" width="41.25" height="12.75" align-x="318.75" align-y="18" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+			<math optimize="false" disable-calc="false">
+				<ml:define warning="WarnRedefinedBIUnit" xmlns:ml="http://schemas.mathsoft.com/math30">
+					<ml:id xml:space="preserve">T</ml:id>
+					<ml:real>1000</ml:real>
+				</ml:define>
+			</math>
+			<rendering item-idref="6"/>
+		</region>
+		<region region-id="55" left="18" top="27" width="42.75" height="12.75" align-x="32.25" align-y="36" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+			<math optimize="false" disable-calc="false">
+				<ml:define warning="WarnRedefinedBIUnit" xmlns:ml="http://schemas.mathsoft.com/math30">
+					<ml:id xml:space="preserve">N</ml:id>
+					<ml:real>1000</ml:real>
+				</ml:define>
+			</math>
+			<rendering item-idref="7"/>
+		</region>
+		<region region-id="80" left="84" top="27" width="40.5" height="12.75" align-x="111" align-y="36" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+			<math optimize="false" disable-calc="false">
+				<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+					<ml:id xml:space="preserve">bmin</ml:id>
+					<ml:real>1</ml:real>
+				</ml:define>
+			</math>
+			<rendering item-idref="8"/>
+		</region>
+		<region region-id="155" left="156" top="27" width="45.75" height="12.75" align-x="183.75" align-y="36" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+			<math optimize="false" disable-calc="false">
+				<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+					<ml:id xml:space="preserve">bmax</ml:id>
+					<ml:real>10</ml:real>
+				</ml:define>
+			</math>
+			<rendering item-idref="9"/>
+		</region>
+		<region region-id="156" left="216" top="27" width="37.5" height="12.75" align-x="235.5" align-y="36" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+			<math optimize="false" disable-calc="false">
+				<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+					<ml:id xml:space="preserve">Nb</ml:id>
+					<ml:real>20</ml:real>
+				</ml:define>
+			</math>
+			<rendering item-idref="10"/>
+		</region>
+		<region region-id="161" left="312" top="27" width="37.5" height="12.75" align-x="324" align-y="36" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+			<math optimize="false" disable-calc="false">
+				<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+					<ml:id xml:space="preserve">a</ml:id>
+					<ml:real>0.01</ml:real>
+				</ml:define>
+			</math>
+			<rendering item-idref="11"/>
+		</region>
+		<region region-id="159" left="12" top="51" width="174" height="186.75" align-x="27" align-y="60" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+			<math optimize="false" disable-calc="false">
+				<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+					<ml:id xml:space="preserve">M</ml:id>
+					<ml:program>
+						<ml:localDefine>
+							<ml:id xml:space="preserve">k</ml:id>
+							<ml:real>1</ml:real>
+						</ml:localDefine>
+						<ml:for>
+							<ml:id xml:space="preserve">t</ml:id>
+							<ml:range>
+								<ml:real>1</ml:real>
+								<ml:id xml:space="preserve">T</ml:id>
+							</ml:range>
+							<ml:program>
+								<ml:localDefine>
+									<ml:id xml:space="preserve">dw</ml:id>
+									<ml:apply>
+										<ml:div/>
+										<ml:real>100</ml:real>
+										<ml:id xml:space="preserve">t</ml:id>
+									</ml:apply>
+								</ml:localDefine>
+								<ml:localDefine>
+									<ml:id xml:space="preserve">bw</ml:id>
+									<ml:apply>
+										<ml:mult/>
+										<ml:id xml:space="preserve">a</ml:id>
+										<ml:id xml:space="preserve">dw</ml:id>
+									</ml:apply>
+								</ml:localDefine>
+								<ml:localDefine>
+									<ml:id xml:space="preserve">x</ml:id>
+									<ml:apply>
+										<ml:id xml:space="preserve">runif</ml:id>
+										<ml:sequence>
+											<ml:id xml:space="preserve">N</ml:id>
+											<ml:real>0</ml:real>
+											<ml:real>10</ml:real>
+										</ml:sequence>
+									</ml:apply>
+								</ml:localDefine>
+								<ml:localDefine>
+									<ml:id xml:space="preserve">y</ml:id>
+									<ml:apply>
+										<ml:plus/>
+										<ml:apply>
+											<ml:mult/>
+											<ml:id xml:space="preserve">bw</ml:id>
+											<ml:id xml:space="preserve">x</ml:id>
+										</ml:apply>
+										<ml:apply>
+											<ml:id xml:space="preserve">rnorm</ml:id>
+											<ml:sequence>
+												<ml:id xml:space="preserve">N</ml:id>
+												<ml:real>0</ml:real>
+												<ml:id xml:space="preserve">dw</ml:id>
+											</ml:sequence>
+										</ml:apply>
+									</ml:apply>
+								</ml:localDefine>
+								<ml:localDefine>
+									<ml:id xml:space="preserve">r</ml:id>
+									<ml:apply>
+										<ml:id xml:space="preserve">corr</ml:id>
+										<ml:sequence>
+											<ml:id xml:space="preserve">x</ml:id>
+											<ml:id xml:space="preserve">y</ml:id>
+										</ml:sequence>
+									</ml:apply>
+								</ml:localDefine>
+								<ml:localDefine>
+									<ml:apply>
+										<ml:indexer/>
+										<ml:id xml:space="preserve">MR</ml:id>
+										<ml:sequence>
+											<ml:id xml:space="preserve">t</ml:id>
+											<ml:real>1</ml:real>
+										</ml:sequence>
+									</ml:apply>
+									<ml:id xml:space="preserve">dw</ml:id>
+								</ml:localDefine>
+								<ml:localDefine>
+									<ml:apply>
+										<ml:indexer/>
+										<ml:id xml:space="preserve">MR</ml:id>
+										<ml:sequence>
+											<ml:id xml:space="preserve">t</ml:id>
+											<ml:real>2</ml:real>
+										</ml:sequence>
+									</ml:apply>
+									<ml:id xml:space="preserve">r</ml:id>
+								</ml:localDefine>
+							</ml:program>
+						</ml:for>
+						<ml:id xml:space="preserve">MR</ml:id>
+					</ml:program>
+				</ml:define>
+			</math>
+			<rendering item-idref="12"/>
+		</region>
+		<region region-id="165" left="324" top="63" width="42" height="12.75" align-x="338.25" align-y="72" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+			<math optimize="false" disable-calc="false">
+				<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+					<ml:id xml:space="preserve">t1</ml:id>
+					<ml:range>
+						<ml:real>1</ml:real>
+						<ml:id xml:space="preserve">T</ml:id>
+					</ml:range>
+				</ml:define>
+			</math>
+			<rendering item-idref="13"/>
+		</region>
+		<region region-id="166" left="222" top="102" width="387" height="189.75" align-x="222" align-y="102" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+			<plot disable-calc="false" item-idref="14"/>
+			<rendering item-idref="15"/>
+		</region>
+		<region region-id="162" left="6" top="261.75" width="256.5" height="222" align-x="20.25" align-y="372" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+			<math optimize="false" disable-calc="false">
+				<ml:eval placeholderMultiplicationStyle="default" xmlns:ml="http://schemas.mathsoft.com/math30">
+					<ml:id xml:space="preserve">M</ml:id>
+					<result xmlns="http://schemas.mathsoft.com/math30">
+						<ml:matrix rows="1000" cols="2">
+							<ml:real>100</ml:real>
+							<ml:real>50</ml:real>
+							<ml:real>33.333333333333336</ml:real>
+							<ml:real>25</ml:real>
+							<ml:real>20</ml:real>
+							<ml:real>16.666666666666668</ml:real>
+							<ml:real>14.285714285714287</ml:real>
+							<ml:real>12.5</ml:real>
+							<ml:real>11.111111111111111</ml:real>
+							<ml:real>10</ml:real>
+							<ml:real>9.0909090909090917</ml:real>
+							<ml:real>8.3333333333333339</ml:real>
+							<ml:real>7.6923076923076925</ml:real>
+							<ml:real>7.1428571428571432</ml:real>
+							<ml:real>6.666666666666667</ml:real>
+							<ml:real>6.25</ml:real>
+							<ml:real>5.882352941176471</ml:real>
+							<ml:real>5.5555555555555554</ml:real>
+							<ml:real>5.2631578947368425</ml:real>
+							<ml:real>5</ml:real>
+							<ml:real>4.7619047619047619</ml:real>
+							<ml:real>4.5454545454545459</ml:real>
+							<ml:real>4.3478260869565215</ml:real>
+							<ml:real>4.166666666666667</ml:real>
+							<ml:real>4</ml:real>
+							<ml:real>3.8461538461538463</ml:real>
+							<ml:real>3.7037037037037037</ml:real>
+							<ml:real>3.5714285714285716</ml:real>
+							<ml:real>3.4482758620689653</ml:real>
+							<ml:real>3.3333333333333335</ml:real>
+							<ml:real>3.225806451612903</ml:real>
+							<ml:real>3.125</ml:real>
+							<ml:real>3.0303030303030303</ml:real>
+							<ml:real>2.9411764705882355</ml:real>
+							<ml:real>2.8571428571428572</ml:real>
+							<ml:real>2.7777777777777777</ml:real>
+							<ml:real>2.7027027027027026</ml:real>
+							<ml:real>2.6315789473684212</ml:real>
+							<ml:real>2.5641025641025643</ml:real>
+							<ml:real>2.5</ml:real>
+							<ml:real>2.4390243902439024</ml:real>
+							<ml:real>2.3809523809523809</ml:real>
+							<ml:real>2.3255813953488373</ml:real>
+							<ml:real>2.2727272727272729</ml:real>
+							<ml:real>2.2222222222222223</ml:real>
+							<ml:real>2.1739130434782608</ml:real>
+							<ml:real>2.1276595744680851</ml:real>
+							<ml:real>2.0833333333333335</ml:real>
+							<ml:real>2.0408163265306123</ml:real>
+							<ml:real>2</ml:real>
+							<ml:real>1.9607843137254901</ml:real>
+							<ml:real>1.9230769230769231</ml:real>
+							<ml:real>1.8867924528301887</ml:real>
+							<ml:real>1.8518518518518519</ml:real>
+							<ml:real>1.8181818181818181</ml:real>
+							<ml:real>1.7857142857142858</ml:real>
+							<ml:real>1.7543859649122806</ml:real>
+							<ml:real>1.7241379310344827</ml:real>
+							<ml:real>1.6949152542372881</ml:real>
+							<ml:real>1.6666666666666667</ml:real>
+							<ml:real>1.639344262295082</ml:real>
+							<ml:real>1.6129032258064515</ml:real>
+							<ml:real>1.5873015873015872</ml:real>
+							<ml:real>1.5625</ml:real>
+							<ml:real>1.5384615384615386</ml:real>
+							<ml:real>1.5151515151515151</ml:real>
+							<ml:real>1.4925373134328359</ml:real>
+							<ml:real>1.4705882352941178</ml:real>
+							<ml:real>1.4492753623188406</ml:real>
+							<ml:real>1.4285714285714286</ml:real>
+							<ml:real>1.408450704225352</ml:real>
+							<ml:real>1.3888888888888888</ml:real>
+							<ml:real>1.36986301369863</ml:real>
+							<ml:real>1.3513513513513513</ml:real>
+							<ml:real>1.3333333333333333</ml:real>
+							<ml:real>1.3157894736842106</ml:real>
+							<ml:real>1.2987012987012987</ml:real>
+							<ml:real>1.2820512820512822</ml:real>
+							<ml:real>1.2658227848101267</ml:real>
+							<ml:real>1.25</ml:real>
+							<ml:real>1.2345679012345678</ml:real>
+							<ml:real>1.2195121951219512</ml:real>
+							<ml:real>1.2048192771084338</ml:real>
+							<ml:real>1.1904761904761905</ml:real>
+							<ml:real>1.1764705882352942</ml:real>
+							<ml:real>1.1627906976744187</ml:real>
+							<ml:real>1.1494252873563218</ml:real>
+							<ml:real>1.1363636363636365</ml:real>
+							<ml:real>1.1235955056179776</ml:real>
+							<ml:real>1.1111111111111112</ml:real>
+							<ml:real>1.098901098901099</ml:real>
+							<ml:real>1.0869565217391304</ml:real>
+							<ml:real>1.075268817204301</ml:real>
+							<ml:real>1.0638297872340425</ml:real>
+							<ml:real>1.0526315789473684</ml:real>
+							<ml:real>1.0416666666666667</ml:real>
+							<ml:real>1.0309278350515463</ml:real>
+							<ml:real>1.0204081632653062</ml:real>
+							<ml:real>1.0101010101010102</ml:real>
+							<ml:real>1</ml:real>
+							<ml:real>0.99009900990099009</ml:real>
+							<ml:real>0.98039215686274506</ml:real>
+							<ml:real>0.970873786407767</ml:real>
+							<ml:real>0.96153846153846156</ml:real>
+							<ml:real>0.95238095238095233</ml:real>
+							<ml:real>0.94339622641509435</ml:real>
+							<ml:real>0.93457943925233644</ml:real>
+							<ml:real>0.92592592592592593</ml:real>
+							<ml:real>0.91743119266055051</ml:real>
+							<ml:real>0.90909090909090906</ml:real>
+							<ml:real>0.90090090090090091</ml:real>
+							<ml:real>0.8928571428571429</ml:real>
+							<ml:real>0.88495575221238942</ml:real>
+							<ml:real>0.8771929824561403</ml:real>
+							<ml:real>0.86956521739130432</ml:real>
+							<ml:real>0.86206896551724133</ml:real>
+							<ml:real>0.85470085470085466</ml:real>
+							<ml:real>0.847457627118644</ml:real>
+							<ml:real>0.84033613445378152</ml:real>
+							<ml:real>0.83333333333333337</ml:real>
+							<ml:real>0.82644628099173556</ml:real>
+							<ml:real>0.819672131147541</ml:real>
+							<ml:real>0.81300813008130079</ml:real>
+							<ml:real>0.80645161290322576</ml:real>
+							<ml:real>0.8</ml:real>
+							<ml:real>0.79365079365079361</ml:real>
+							<ml:real>0.78740157480314965</ml:real>
+							<ml:real>0.78125</ml:real>
+							<ml:real>0.77519379844961245</ml:real>
+							<ml:real>0.76923076923076927</ml:real>
+							<ml:real>0.76335877862595425</ml:real>
+							<ml:real>0.75757575757575757</ml:real>
+							<ml:real>0.75187969924812026</ml:real>
+							<ml:real>0.746268656716418</ml:real>
+							<ml:real>0.7407407407407407</ml:real>
+							<ml:real>0.73529411764705888</ml:real>
+							<ml:real>0.72992700729927007</ml:real>
+							<ml:real>0.72463768115942029</ml:real>
+							<ml:real>0.71942446043165464</ml:real>
+							<ml:real>0.7142857142857143</ml:real>
+							<ml:real>0.70921985815602839</ml:real>
+							<ml:real>0.704225352112676</ml:real>
+							<ml:real>0.69930069930069927</ml:real>
+							<ml:real>0.69444444444444442</ml:real>
+							<ml:real>0.68965517241379315</ml:real>
+							<ml:real>0.684931506849315</ml:real>
+							<ml:real>0.68027210884353739</ml:real>
+							<ml:real>0.67567567567567566</ml:real>
+							<ml:real>0.67114093959731547</ml:real>
+							<ml:real>0.66666666666666663</ml:real>
+							<ml:real>0.66225165562913912</ml:real>
+							<ml:real>0.65789473684210531</ml:real>
+							<ml:real>0.65359477124183007</ml:real>
+							<ml:real>0.64935064935064934</ml:real>
+							<ml:real>0.64516129032258063</ml:real>
+							<ml:real>0.64102564102564108</ml:real>
+							<ml:real>0.63694267515923564</ml:real>
+							<ml:real>0.63291139240506333</ml:real>
+							<ml:real>0.62893081761006286</ml:real>
+							<ml:real>0.625</ml:real>
+							<ml:real>0.6211180124223602</ml:real>
+							<ml:real>0.61728395061728392</ml:real>
+							<ml:real>0.61349693251533743</ml:real>
+							<ml:real>0.6097560975609756</ml:real>
+							<ml:real>0.60606060606060608</ml:real>
+							<ml:real>0.60240963855421692</ml:real>
+							<ml:real>0.59880239520958078</ml:real>
+							<ml:real>0.59523809523809523</ml:real>
+							<ml:real>0.591715976331361</ml:real>
+							<ml:real>0.58823529411764708</ml:real>
+							<ml:real>0.58479532163742687</ml:real>
+							<ml:real>0.58139534883720934</ml:real>
+							<ml:real>0.5780346820809249</ml:real>
+							<ml:real>0.57471264367816088</ml:real>
+							<ml:real>0.5714285714285714</ml:real>
+							<ml:real>0.56818181818181823</ml:real>
+							<ml:real>0.56497175141242939</ml:real>
+							<ml:real>0.5617977528089888</ml:real>
+							<ml:real>0.55865921787709494</ml:real>
+							<ml:real>0.55555555555555558</ml:real>
+							<ml:real>0.5524861878453039</ml:real>
+							<ml:real>0.5494505494505495</ml:real>
+							<ml:real>0.546448087431694</ml:real>
+							<ml:real>0.54347826086956519</ml:real>
+							<ml:real>0.54054054054054057</ml:real>
+							<ml:real>0.5376344086021505</ml:real>
+							<ml:real>0.53475935828877008</ml:real>
+							<ml:real>0.53191489361702127</ml:real>
+							<ml:real>0.52910052910052907</ml:real>
+							<ml:real>0.52631578947368418</ml:real>
+							<ml:real>0.52356020942408377</ml:real>
+							<ml:real>0.52083333333333337</ml:real>
+							<ml:real>0.51813471502590669</ml:real>
+							<ml:real>0.51546391752577314</ml:real>
+							<ml:real>0.51282051282051277</ml:real>
+							<ml:real>0.51020408163265307</ml:real>
+							<ml:real>0.50761421319796951</ml:real>
+							<ml:real>0.50505050505050508</ml:real>
+							<ml:real>0.50251256281407031</ml:real>
+							<ml:real>0.5</ml:real>
+							<ml:real>0.49751243781094528</ml:real>
+							<ml:real>0.49504950495049505</ml:real>
+							<ml:real>0.49261083743842365</ml:real>
+							<ml:real>0.49019607843137253</ml:real>
+							<ml:real>0.48780487804878048</ml:real>
+							<ml:real>0.4854368932038835</ml:real>
+							<ml:real>0.48309178743961351</ml:real>
+							<ml:real>0.48076923076923078</ml:real>
+							<ml:real>0.4784688995215311</ml:real>
+							<ml:real>0.47619047619047616</ml:real>
+							<ml:real>0.47393364928909953</ml:real>
+							<ml:real>0.47169811320754718</ml:real>
+							<ml:real>0.46948356807511737</ml:real>
+							<ml:real>0.46728971962616822</ml:real>
+							<ml:real>0.46511627906976744</ml:real>
+							<ml:real>0.46296296296296296</ml:real>
+							<ml:real>0.46082949308755761</ml:real>
+							<ml:real>0.45871559633027525</ml:real>
+							<ml:real>0.45662100456621</ml:real>
+							<ml:real>0.45454545454545453</ml:real>
+							<ml:real>0.45248868778280543</ml:real>
+							<ml:real>0.45045045045045046</ml:real>
+							<ml:real>0.44843049327354262</ml:real>
+							<ml:real>0.44642857142857145</ml:real>
+							<ml:real>0.44444444444444442</ml:real>
+							<ml:real>0.44247787610619471</ml:real>
+							<ml:real>0.44052863436123346</ml:real>
+							<ml:real>0.43859649122807015</ml:real>
+							<ml:real>0.4366812227074236</ml:real>
+							<ml:real>0.43478260869565216</ml:real>
+							<ml:real>0.4329004329004329</ml:real>
+							<ml:real>0.43103448275862066</ml:real>
+							<ml:real>0.42918454935622319</ml:real>
+							<ml:real>0.42735042735042733</ml:real>
+							<ml:real>0.425531914893617</ml:real>
+							<ml:real>0.423728813559322</ml:real>
+							<ml:real>0.4219409282700422</ml:real>
+							<ml:real>0.42016806722689076</ml:real>
+							<ml:real>0.41841004184100417</ml:real>
+							<ml:real>0.41666666666666669</ml:real>
+							<ml:real>0.41493775933609961</ml:real>
+							<ml:real>0.41322314049586778</ml:real>
+							<ml:real>0.411522633744856</ml:real>
+							<ml:real>0.4098360655737705</ml:real>
+							<ml:real>0.40816326530612246</ml:real>
+							<ml:real>0.4065040650406504</ml:real>
+							<ml:real>0.40485829959514169</ml:real>
+							<ml:real>0.40322580645161288</ml:real>
+							<ml:real>0.40160642570281124</ml:real>
+							<ml:real>0.4</ml:real>
+							<ml:real>0.398406374501992</ml:real>
+							<ml:real>0.3968253968253968</ml:real>
+							<ml:real>0.39525691699604742</ml:real>
+							<ml:real>0.39370078740157483</ml:real>
+							<ml:real>0.39215686274509803</ml:real>
+							<ml:real>0.390625</ml:real>
+							<ml:real>0.38910505836575876</ml:real>
+							<ml:real>0.38759689922480622</ml:real>
+							<ml:real>0.38610038610038611</ml:real>
+							<ml:real>0.38461538461538464</ml:real>
+							<ml:real>0.38314176245210729</ml:real>
+							<ml:real>0.38167938931297712</ml:real>
+							<ml:real>0.38022813688212925</ml:real>
+							<ml:real>0.37878787878787878</ml:real>
+							<ml:real>0.37735849056603776</ml:real>
+							<ml:real>0.37593984962406013</ml:real>
+							<ml:real>0.37453183520599254</ml:real>
+							<ml:real>0.373134328358209</ml:real>
+							<ml:real>0.37174721189591076</ml:real>
+							<ml:real>0.37037037037037035</ml:real>
+							<ml:real>0.36900369003690037</ml:real>
+							<ml:real>0.36764705882352944</ml:real>
+							<ml:real>0.36630036630036628</ml:real>
+							<ml:real>0.36496350364963503</ml:real>
+							<ml:real>0.36363636363636365</ml:real>
+							<ml:real>0.36231884057971014</ml:real>
+							<ml:real>0.36101083032490977</ml:real>
+							<ml:real>0.35971223021582732</ml:real>
+							<ml:real>0.35842293906810035</ml:real>
+							<ml:real>0.35714285714285715</ml:real>
+							<ml:real>0.35587188612099646</ml:real>
+							<ml:real>0.3546099290780142</ml:real>
+							<ml:real>0.35335689045936397</ml:real>
+							<ml:real>0.352112676056338</ml:real>
+							<ml:real>0.35087719298245612</ml:real>
+							<ml:real>0.34965034965034963</ml:real>
+							<ml:real>0.34843205574912894</ml:real>
+							<ml:real>0.34722222222222221</ml:real>
+							<ml:real>0.34602076124567471</ml:real>
+							<ml:real>0.34482758620689657</ml:real>
+							<ml:real>0.3436426116838488</ml:real>
+							<ml:real>0.34246575342465752</ml:real>
+							<ml:real>0.34129692832764508</ml:real>
+							<ml:real>0.3401360544217687</ml:real>
+							<ml:real>0.33898305084745761</ml:real>
+							<ml:real>0.33783783783783783</ml:real>
+							<ml:real>0.33670033670033672</ml:real>
+							<ml:real>0.33557046979865773</ml:real>
+							<ml:real>0.33444816053511706</ml:real>
+							<ml:real>0.33333333333333331</ml:real>
+							<ml:real>0.33222591362126247</ml:real>
+							<ml:real>0.33112582781456956</ml:real>
+							<ml:real>0.33003300330033003</ml:real>
+							<ml:real>0.32894736842105265</ml:real>
+							<ml:real>0.32786885245901637</ml:real>
+							<ml:real>0.32679738562091504</ml:real>
+							<ml:real>0.32573289902280128</ml:real>
+							<ml:real>0.32467532467532467</ml:real>
+							<ml:real>0.32362459546925565</ml:real>
+							<ml:real>0.32258064516129031</ml:real>
+							<ml:real>0.32154340836012862</ml:real>
+							<ml:real>0.32051282051282054</ml:real>
+							<ml:real>0.31948881789137379</ml:real>
+							<ml:real>0.31847133757961782</ml:real>
+							<ml:real>0.31746031746031744</ml:real>
+							<ml:real>0.31645569620253167</ml:real>
+							<ml:real>0.31545741324921134</ml:real>
+							<ml:real>0.31446540880503143</ml:real>
+							<ml:real>0.31347962382445144</ml:real>
+							<ml:real>0.3125</ml:real>
+							<ml:real>0.3115264797507788</ml:real>
+							<ml:real>0.3105590062111801</ml:real>
+							<ml:real>0.30959752321981426</ml:real>
+							<ml:real>0.30864197530864196</ml:real>
+							<ml:real>0.30769230769230771</ml:real>
+							<ml:real>0.30674846625766872</ml:real>
+							<ml:real>0.3058103975535168</ml:real>
+							<ml:real>0.3048780487804878</ml:real>
+							<ml:real>0.303951367781155</ml:real>
+							<ml:real>0.30303030303030304</ml:real>
+							<ml:real>0.30211480362537763</ml:real>
+							<ml:real>0.30120481927710846</ml:real>
+							<ml:real>0.3003003003003003</ml:real>
+							<ml:real>0.29940119760479039</ml:real>
+							<ml:real>0.29850746268656714</ml:real>
+							<ml:real>0.29761904761904762</ml:real>
+							<ml:real>0.29673590504451036</ml:real>
+							<ml:real>0.29585798816568049</ml:real>
+							<ml:real>0.29498525073746312</ml:real>
+							<ml:real>0.29411764705882354</ml:real>
+							<ml:real>0.2932551319648094</ml:real>
+							<ml:real>0.29239766081871343</ml:real>
+							<ml:real>0.29154518950437319</ml:real>
+							<ml:real>0.29069767441860467</ml:real>
+							<ml:real>0.28985507246376813</ml:real>
+							<ml:real>0.28901734104046245</ml:real>
+							<ml:real>0.28818443804034582</ml:real>
+							<ml:real>0.28735632183908044</ml:real>
+							<ml:real>0.28653295128939826</ml:real>
+							<ml:real>0.2857142857142857</ml:real>
+							<ml:real>0.28490028490028491</ml:real>
+							<ml:real>0.28409090909090912</ml:real>
+							<ml:real>0.28328611898017</ml:real>
+							<ml:real>0.2824858757062147</ml:real>
+							<ml:real>0.28169014084507044</ml:real>
+							<ml:real>0.2808988764044944</ml:real>
+							<ml:real>0.28011204481792717</ml:real>
+							<ml:real>0.27932960893854747</ml:real>
+							<ml:real>0.2785515320334262</ml:real>
+							<ml:real>0.27777777777777779</ml:real>
+							<ml:real>0.2770083102493075</ml:real>
+							<ml:real>0.27624309392265195</ml:real>
+							<ml:real>0.27548209366391185</ml:real>
+							<ml:real>0.27472527472527475</ml:real>
+							<ml:real>0.273972602739726</ml:real>
+							<ml:real>0.273224043715847</ml:real>
+							<ml:real>0.27247956403269757</ml:real>
+							<ml:real>0.27173913043478259</ml:real>
+							<ml:real>0.27100271002710025</ml:real>
+							<ml:real>0.27027027027027029</ml:real>
+							<ml:real>0.26954177897574122</ml:real>
+							<ml:real>0.26881720430107525</ml:real>
+							<ml:real>0.26809651474530832</ml:real>
+							<ml:real>0.26737967914438504</ml:real>
+							<ml:real>0.26666666666666666</ml:real>
+							<ml:real>0.26595744680851063</ml:real>
+							<ml:real>0.26525198938992045</ml:real>
+							<ml:real>0.26455026455026454</ml:real>
+							<ml:real>0.26385224274406333</ml:real>
+							<ml:real>0.26315789473684209</ml:real>
+							<ml:real>0.26246719160104987</ml:real>
+							<ml:real>0.26178010471204188</ml:real>
+							<ml:real>0.26109660574412535</ml:real>
+							<ml:real>0.26041666666666669</ml:real>
+							<ml:real>0.25974025974025972</ml:real>
+							<ml:real>0.25906735751295334</ml:real>
+							<ml:real>0.25839793281653745</ml:real>
+							<ml:real>0.25773195876288657</ml:real>
+							<ml:real>0.25706940874035988</ml:real>
+							<ml:real>0.25641025641025639</ml:real>
+							<ml:real>0.25575447570332482</ml:real>
+							<ml:real>0.25510204081632654</ml:real>
+							<ml:real>0.2544529262086514</ml:real>
+							<ml:real>0.25380710659898476</ml:real>
+							<ml:real>0.25316455696202533</ml:real>
+							<ml:real>0.25252525252525254</ml:real>
+							<ml:real>0.25188916876574308</ml:real>
+							<ml:real>0.25125628140703515</ml:real>
+							<ml:real>0.25062656641604009</ml:real>
+							<ml:real>0.25</ml:real>
+							<ml:real>0.24937655860349128</ml:real>
+							<ml:real>0.24875621890547264</ml:real>
+							<ml:real>0.24813895781637718</ml:real>
+							<ml:real>0.24752475247524752</ml:real>
+							<ml:real>0.24691358024691357</ml:real>
+							<ml:real>0.24630541871921183</ml:real>
+							<ml:real>0.24570024570024571</ml:real>
+							<ml:real>0.24509803921568626</ml:real>
+							<ml:real>0.24449877750611246</ml:real>
+							<ml:real>0.24390243902439024</ml:real>
+							<ml:real>0.24330900243309003</ml:real>
+							<ml:real>0.24271844660194175</ml:real>
+							<ml:real>0.24213075060532688</ml:real>
+							<ml:real>0.24154589371980675</ml:real>
+							<ml:real>0.24096385542168675</ml:real>
+							<ml:real>0.24038461538461539</ml:real>
+							<ml:real>0.23980815347721823</ml:real>
+							<ml:real>0.23923444976076555</ml:real>
+							<ml:real>0.2386634844868735</ml:real>
+							<ml:real>0.23809523809523808</ml:real>
+							<ml:real>0.23752969121140141</ml:real>
+							<ml:real>0.23696682464454977</ml:real>
+							<ml:real>0.2364066193853428</ml:real>
+							<ml:real>0.23584905660377359</ml:real>
+							<ml:real>0.23529411764705882</ml:real>
+							<ml:real>0.23474178403755869</ml:real>
+							<ml:real>0.234192037470726</ml:real>
+							<ml:real>0.23364485981308411</ml:real>
+							<ml:real>0.23310023310023309</ml:real>
+							<ml:real>0.23255813953488372</ml:real>
+							<ml:real>0.23201856148491878</ml:real>
+							<ml:real>0.23148148148148148</ml:real>
+							<ml:real>0.23094688221709006</ml:real>
+							<ml:real>0.2304147465437788</ml:real>
+							<ml:real>0.22988505747126437</ml:real>
+							<ml:real>0.22935779816513763</ml:real>
+							<ml:real>0.2288329519450801</ml:real>
+							<ml:real>0.228310502283105</ml:real>
+							<ml:real>0.22779043280182232</ml:real>
+							<ml:real>0.22727272727272727</ml:real>
+							<ml:real>0.22675736961451248</ml:real>
+							<ml:real>0.22624434389140272</ml:real>
+							<ml:real>0.22573363431151242</ml:real>
+							<ml:real>0.22522522522522523</ml:real>
+							<ml:real>0.2247191011235955</ml:real>
+							<ml:real>0.22421524663677131</ml:real>
+							<ml:real>0.22371364653243847</ml:real>
+							<ml:real>0.22321428571428573</ml:real>
+							<ml:real>0.22271714922049</ml:real>
+							<ml:real>0.22222222222222221</ml:real>
+							<ml:real>0.22172949002217296</ml:real>
+							<ml:real>0.22123893805309736</ml:real>
+							<ml:real>0.22075055187637968</ml:real>
+							<ml:real>0.22026431718061673</ml:real>
+							<ml:real>0.21978021978021978</ml:real>
+							<ml:real>0.21929824561403508</ml:real>
+							<ml:real>0.21881838074398249</ml:real>
+							<ml:real>0.2183406113537118</ml:real>
+							<ml:real>0.2178649237472767</ml:real>
+							<ml:real>0.21739130434782608</ml:real>
+							<ml:real>0.21691973969631237</ml:real>
+							<ml:real>0.21645021645021645</ml:real>
+							<ml:real>0.21598272138228941</ml:real>
+							<ml:real>0.21551724137931033</ml:real>
+							<ml:real>0.21505376344086022</ml:real>
+							<ml:real>0.21459227467811159</ml:real>
+							<ml:real>0.21413276231263384</ml:real>
+							<ml:real>0.21367521367521367</ml:real>
+							<ml:real>0.21321961620469082</ml:real>
+							<ml:real>0.21276595744680851</ml:real>
+							<ml:real>0.21231422505307857</ml:real>
+							<ml:real>0.211864406779661</ml:real>
+							<ml:real>0.21141649048625794</ml:real>
+							<ml:real>0.2109704641350211</ml:real>
+							<ml:real>0.21052631578947367</ml:real>
+							<ml:real>0.21008403361344538</ml:real>
+							<ml:real>0.20964360587002096</ml:real>
+							<ml:real>0.20920502092050208</ml:real>
+							<ml:real>0.20876826722338204</ml:real>
+							<ml:real>0.20833333333333334</ml:real>
+							<ml:real>0.20790020790020791</ml:real>
+							<ml:real>0.20746887966804981</ml:real>
+							<ml:real>0.20703933747412009</ml:real>
+							<ml:real>0.20661157024793389</ml:real>
+							<ml:real>0.20618556701030927</ml:real>
+							<ml:real>0.205761316872428</ml:real>
+							<ml:real>0.20533880903490759</ml:real>
+							<ml:real>0.20491803278688525</ml:real>
+							<ml:real>0.20449897750511248</ml:real>
+							<ml:real>0.20408163265306123</ml:real>
+							<ml:real>0.20366598778004075</ml:real>
+							<ml:real>0.2032520325203252</ml:real>
+							<ml:real>0.20283975659229209</ml:real>
+							<ml:real>0.20242914979757085</ml:real>
+							<ml:real>0.20202020202020202</ml:real>
+							<ml:real>0.20161290322580644</ml:real>
+							<ml:real>0.2012072434607646</ml:real>
+							<ml:real>0.20080321285140562</ml:real>
+							<ml:real>0.20040080160320642</ml:real>
+							<ml:real>0.2</ml:real>
+							<ml:real>0.19960079840319361</ml:real>
+							<ml:real>0.199203187250996</ml:real>
+							<ml:real>0.19880715705765409</ml:real>
+							<ml:real>0.1984126984126984</ml:real>
+							<ml:real>0.19801980198019803</ml:real>
+							<ml:real>0.19762845849802371</ml:real>
+							<ml:real>0.19723865877712032</ml:real>
+							<ml:real>0.19685039370078741</ml:real>
+							<ml:real>0.19646365422396855</ml:real>
+							<ml:real>0.19607843137254902</ml:real>
+							<ml:real>0.19569471624266144</ml:real>
+							<ml:real>0.1953125</ml:real>
+							<ml:real>0.19493177387914229</ml:real>
+							<ml:real>0.19455252918287938</ml:real>
+							<ml:real>0.1941747572815534</ml:real>
+							<ml:real>0.19379844961240311</ml:real>
+							<ml:real>0.19342359767891681</ml:real>
+							<ml:real>0.19305019305019305</ml:real>
+							<ml:real>0.19267822736030829</ml:real>
+							<ml:real>0.19230769230769232</ml:real>
+							<ml:real>0.19193857965451056</ml:real>
+							<ml:real>0.19157088122605365</ml:real>
+							<ml:real>0.19120458891013384</ml:real>
+							<ml:real>0.19083969465648856</ml:real>
+							<ml:real>0.19047619047619047</ml:real>
+							<ml:real>0.19011406844106463</ml:real>
+							<ml:real>0.18975332068311196</ml:real>
+							<ml:real>0.18939393939393939</ml:real>
+							<ml:real>0.1890359168241966</ml:real>
+							<ml:real>0.18867924528301888</ml:real>
+							<ml:real>0.18832391713747645</ml:real>
+							<ml:real>0.18796992481203007</ml:real>
+							<ml:real>0.18761726078799249</ml:real>
+							<ml:real>0.18726591760299627</ml:real>
+							<ml:real>0.18691588785046728</ml:real>
+							<ml:real>0.18656716417910449</ml:real>
+							<ml:real>0.186219739292365</ml:real>
+							<ml:real>0.18587360594795538</ml:real>
+							<ml:real>0.18552875695732837</ml:real>
+							<ml:real>0.18518518518518518</ml:real>
+							<ml:real>0.18484288354898337</ml:real>
+							<ml:real>0.18450184501845018</ml:real>
+							<ml:real>0.18416206261510129</ml:real>
+							<ml:real>0.18382352941176472</ml:real>
+							<ml:real>0.1834862385321101</ml:real>
+							<ml:real>0.18315018315018314</ml:real>
+							<ml:real>0.18281535648994515</ml:real>
+							<ml:real>0.18248175182481752</ml:real>
+							<ml:real>0.18214936247723132</ml:real>
+							<ml:real>0.18181818181818182</ml:real>
+							<ml:real>0.18148820326678766</ml:real>
+							<ml:real>0.18115942028985507</ml:real>
+							<ml:real>0.18083182640144666</ml:real>
+							<ml:real>0.18050541516245489</ml:real>
+							<ml:real>0.18018018018018017</ml:real>
+							<ml:real>0.17985611510791366</ml:real>
+							<ml:real>0.17953321364452424</ml:real>
+							<ml:real>0.17921146953405018</ml:real>
+							<ml:real>0.17889087656529518</ml:real>
+							<ml:real>0.17857142857142858</ml:real>
+							<ml:real>0.17825311942959002</ml:real>
+							<ml:real>0.17793594306049823</ml:real>
+							<ml:real>0.17761989342806395</ml:real>
+							<ml:real>0.1773049645390071</ml:real>
+							<ml:real>0.17699115044247787</ml:real>
+							<ml:real>0.17667844522968199</ml:real>
+							<ml:real>0.17636684303350969</ml:real>
+							<ml:real>0.176056338028169</ml:real>
+							<ml:real>0.1757469244288225</ml:real>
+							<ml:real>0.17543859649122806</ml:real>
+							<ml:real>0.17513134851138354</ml:real>
+							<ml:real>0.17482517482517482</ml:real>
+							<ml:real>0.17452006980802792</ml:real>
+							<ml:real>0.17421602787456447</ml:real>
+							<ml:real>0.17391304347826087</ml:real>
+							<ml:real>0.17361111111111111</ml:real>
+							<ml:real>0.1733102253032929</ml:real>
+							<ml:real>0.17301038062283736</ml:real>
+							<ml:real>0.17271157167530224</ml:real>
+							<ml:real>0.17241379310344829</ml:real>
+							<ml:real>0.1721170395869191</ml:real>
+							<ml:real>0.1718213058419244</ml:real>
+							<ml:real>0.17152658662092624</ml:real>
+							<ml:real>0.17123287671232876</ml:real>
+							<ml:real>0.17094017094017094</ml:real>
+							<ml:real>0.17064846416382254</ml:real>
+							<ml:real>0.17035775127768313</ml:real>
+							<ml:real>0.17006802721088435</ml:real>
+							<ml:real>0.1697792869269949</ml:real>
+							<ml:real>0.16949152542372881</ml:real>
+							<ml:real>0.16920473773265651</ml:real>
+							<ml:real>0.16891891891891891</ml:real>
+							<ml:real>0.16863406408094436</ml:real>
+							<ml:real>0.16835016835016836</ml:real>
+							<ml:real>0.16806722689075632</ml:real>
+							<ml:real>0.16778523489932887</ml:real>
+							<ml:real>0.16750418760469013</ml:real>
+							<ml:real>0.16722408026755853</ml:real>
+							<ml:real>0.1669449081803005</ml:real>
+							<ml:real>0.16666666666666666</ml:real>
+							<ml:real>0.16638935108153077</ml:real>
+							<ml:real>0.16611295681063124</ml:real>
+							<ml:real>0.16583747927031509</ml:real>
+							<ml:real>0.16556291390728478</ml:real>
+							<ml:real>0.16528925619834711</ml:real>
+							<ml:real>0.16501650165016502</ml:real>
+							<ml:real>0.16474464579901152</ml:real>
+							<ml:real>0.16447368421052633</ml:real>
+							<ml:real>0.16420361247947454</ml:real>
+							<ml:real>0.16393442622950818</ml:real>
+							<ml:real>0.16366612111292964</ml:real>
+							<ml:real>0.16339869281045752</ml:real>
+							<ml:real>0.16313213703099511</ml:real>
+							<ml:real>0.16286644951140064</ml:real>
+							<ml:real>0.16260162601626016</ml:real>
+							<ml:real>0.16233766233766234</ml:real>
+							<ml:real>0.16207455429497569</ml:real>
+							<ml:real>0.16181229773462783</ml:real>
+							<ml:real>0.16155088852988692</ml:real>
+							<ml:real>0.16129032258064516</ml:real>
+							<ml:real>0.1610305958132045</ml:real>
+							<ml:real>0.16077170418006431</ml:real>
+							<ml:real>0.16051364365971108</ml:real>
+							<ml:real>0.16025641025641027</ml:real>
+							<ml:real>0.16</ml:real>
+							<ml:real>0.15974440894568689</ml:real>
+							<ml:real>0.15948963317384371</ml:real>
+							<ml:real>0.15923566878980891</ml:real>
+							<ml:real>0.1589825119236884</ml:real>
+							<ml:real>0.15873015873015872</ml:real>
+							<ml:real>0.15847860538827258</ml:real>
+							<ml:real>0.15822784810126583</ml:real>
+							<ml:real>0.15797788309636651</ml:real>
+							<ml:real>0.15772870662460567</ml:real>
+							<ml:real>0.15748031496062992</ml:real>
+							<ml:real>0.15723270440251572</ml:real>
+							<ml:real>0.15698587127158556</ml:real>
+							<ml:real>0.15673981191222572</ml:real>
+							<ml:real>0.1564945226917058</ml:real>
+							<ml:real>0.15625</ml:real>
+							<ml:real>0.15600624024961</ml:real>
+							<ml:real>0.1557632398753894</ml:real>
+							<ml:real>0.15552099533437014</ml:real>
+							<ml:real>0.15527950310559005</ml:real>
+							<ml:real>0.15503875968992248</ml:real>
+							<ml:real>0.15479876160990713</ml:real>
+							<ml:real>0.15455950540958269</ml:real>
+							<ml:real>0.15432098765432098</ml:real>
+							<ml:real>0.15408320493066255</ml:real>
+							<ml:real>0.15384615384615386</ml:real>
+							<ml:real>0.15360983102918588</ml:real>
+							<ml:real>0.15337423312883436</ml:real>
+							<ml:real>0.15313935681470137</ml:real>
+							<ml:real>0.1529051987767584</ml:real>
+							<ml:real>0.15267175572519084</ml:real>
+							<ml:real>0.1524390243902439</ml:real>
+							<ml:real>0.15220700152207</ml:real>
+							<ml:real>0.1519756838905775</ml:real>
+							<ml:real>0.15174506828528073</ml:real>
+							<ml:real>0.15151515151515152</ml:real>
+							<ml:real>0.15128593040847202</ml:real>
+							<ml:real>0.15105740181268881</ml:real>
+							<ml:real>0.15082956259426847</ml:real>
+							<ml:real>0.15060240963855423</ml:real>
+							<ml:real>0.15037593984962405</ml:real>
+							<ml:real>0.15015015015015015</ml:real>
+							<ml:real>0.14992503748125938</ml:real>
+							<ml:real>0.1497005988023952</ml:real>
+							<ml:real>0.14947683109118087</ml:real>
+							<ml:real>0.14925373134328357</ml:real>
+							<ml:real>0.14903129657228018</ml:real>
+							<ml:real>0.14880952380952381</ml:real>
+							<ml:real>0.14858841010401189</ml:real>
+							<ml:real>0.14836795252225518</ml:real>
+							<ml:real>0.14814814814814814</ml:real>
+							<ml:real>0.14792899408284024</ml:real>
+							<ml:real>0.14771048744460857</ml:real>
+							<ml:real>0.14749262536873156</ml:real>
+							<ml:real>0.14727540500736377</ml:real>
+							<ml:real>0.14705882352941177</ml:real>
+							<ml:real>0.14684287812041116</ml:real>
+							<ml:real>0.1466275659824047</ml:real>
+							<ml:real>0.14641288433382138</ml:real>
+							<ml:real>0.14619883040935672</ml:real>
+							<ml:real>0.145985401459854</ml:real>
+							<ml:real>0.1457725947521866</ml:real>
+							<ml:real>0.14556040756914118</ml:real>
+							<ml:real>0.14534883720930233</ml:real>
+							<ml:real>0.14513788098693758</ml:real>
+							<ml:real>0.14492753623188406</ml:real>
+							<ml:real>0.14471780028943559</ml:real>
+							<ml:real>0.14450867052023123</ml:real>
+							<ml:real>0.14430014430014429</ml:real>
+							<ml:real>0.14409221902017291</ml:real>
+							<ml:real>0.14388489208633093</ml:real>
+							<ml:real>0.14367816091954022</ml:real>
+							<ml:real>0.14347202295552367</ml:real>
+							<ml:real>0.14326647564469913</ml:real>
+							<ml:real>0.14306151645207441</ml:real>
+							<ml:real>0.14285714285714285</ml:real>
+							<ml:real>0.14265335235378032</ml:real>
+							<ml:real>0.14245014245014245</ml:real>
+							<ml:real>0.14224751066856331</ml:real>
+							<ml:real>0.14204545454545456</ml:real>
+							<ml:real>0.14184397163120568</ml:real>
+							<ml:real>0.141643059490085</ml:real>
+							<ml:real>0.14144271570014144</ml:real>
+							<ml:real>0.14124293785310735</ml:real>
+							<ml:real>0.14104372355430184</ml:real>
+							<ml:real>0.14084507042253522</ml:real>
+							<ml:real>0.14064697609001406</ml:real>
+							<ml:real>0.1404494382022472</ml:real>
+							<ml:real>0.14025245441795231</ml:real>
+							<ml:real>0.14005602240896359</ml:real>
+							<ml:real>0.13986013986013987</ml:real>
+							<ml:real>0.13966480446927373</ml:real>
+							<ml:real>0.1394700139470014</ml:real>
+							<ml:real>0.1392757660167131</ml:real>
+							<ml:real>0.13908205841446453</ml:real>
+							<ml:real>0.1388888888888889</ml:real>
+							<ml:real>0.13869625520110956</ml:real>
+							<ml:real>0.13850415512465375</ml:real>
+							<ml:real>0.13831258644536654</ml:real>
+							<ml:real>0.13812154696132598</ml:real>
+							<ml:real>0.13793103448275862</ml:real>
+							<ml:real>0.13774104683195593</ml:real>
+							<ml:real>0.13755158184319119</ml:real>
+							<ml:real>0.13736263736263737</ml:real>
+							<ml:real>0.13717421124828533</ml:real>
+							<ml:real>0.136986301369863</ml:real>
+							<ml:real>0.13679890560875513</ml:real>
+							<ml:real>0.13661202185792351</ml:real>
+							<ml:real>0.13642564802182811</ml:real>
+							<ml:real>0.13623978201634879</ml:real>
+							<ml:real>0.1360544217687075</ml:real>
+							<ml:real>0.1358695652173913</ml:real>
+							<ml:real>0.13568521031207598</ml:real>
+							<ml:real>0.13550135501355012</ml:real>
+							<ml:real>0.13531799729364005</ml:real>
+							<ml:real>0.13513513513513514</ml:real>
+							<ml:real>0.1349527665317139</ml:real>
+							<ml:real>0.13477088948787061</ml:real>
+							<ml:real>0.13458950201884254</ml:real>
+							<ml:real>0.13440860215053763</ml:real>
+							<ml:real>0.13422818791946309</ml:real>
+							<ml:real>0.13404825737265416</ml:real>
+							<ml:real>0.13386880856760375</ml:real>
+							<ml:real>0.13368983957219252</ml:real>
+							<ml:real>0.13351134846461948</ml:real>
+							<ml:real>0.13333333333333333</ml:real>
+							<ml:real>0.13315579227696406</ml:real>
+							<ml:real>0.13297872340425532</ml:real>
+							<ml:real>0.13280212483399734</ml:real>
+							<ml:real>0.13262599469496023</ml:real>
+							<ml:real>0.13245033112582783</ml:real>
+							<ml:real>0.13227513227513227</ml:real>
+							<ml:real>0.13210039630118892</ml:real>
+							<ml:real>0.13192612137203166</ml:real>
+							<ml:real>0.13175230566534915</ml:real>
+							<ml:real>0.13157894736842105</ml:real>
+							<ml:real>0.1314060446780552</ml:real>
+							<ml:real>0.13123359580052493</ml:real>
+							<ml:real>0.13106159895150721</ml:real>
+							<ml:real>0.13089005235602094</ml:real>
+							<ml:real>0.13071895424836602</ml:real>
+							<ml:real>0.13054830287206268</ml:real>
+							<ml:real>0.1303780964797914</ml:real>
+							<ml:real>0.13020833333333334</ml:real>
+							<ml:real>0.13003901170351107</ml:real>
+							<ml:real>0.12987012987012986</ml:real>
+							<ml:real>0.1297016861219196</ml:real>
+							<ml:real>0.12953367875647667</ml:real>
+							<ml:real>0.129366106080207</ml:real>
+							<ml:real>0.12919896640826872</ml:real>
+							<ml:real>0.12903225806451613</ml:real>
+							<ml:real>0.12886597938144329</ml:real>
+							<ml:real>0.1287001287001287</ml:real>
+							<ml:real>0.12853470437017994</ml:real>
+							<ml:real>0.12836970474967907</ml:real>
+							<ml:real>0.12820512820512819</ml:real>
+							<ml:real>0.12804097311139565</ml:real>
+							<ml:real>0.12787723785166241</ml:real>
+							<ml:real>0.1277139208173691</ml:real>
+							<ml:real>0.12755102040816327</ml:real>
+							<ml:real>0.12738853503184713</ml:real>
+							<ml:real>0.1272264631043257</ml:real>
+							<ml:real>0.12706480304955528</ml:real>
+							<ml:real>0.12690355329949238</ml:real>
+							<ml:real>0.1267427122940431</ml:real>
+							<ml:real>0.12658227848101267</ml:real>
+							<ml:real>0.12642225031605561</ml:real>
+							<ml:real>0.12626262626262627</ml:real>
+							<ml:real>0.12610340479192939</ml:real>
+							<ml:real>0.12594458438287154</ml:real>
+							<ml:real>0.12578616352201258</ml:real>
+							<ml:real>0.12562814070351758</ml:real>
+							<ml:real>0.12547051442910917</ml:real>
+							<ml:real>0.12531328320802004</ml:real>
+							<ml:real>0.12515644555694619</ml:real>
+							<ml:real>0.125</ml:real>
+							<ml:real>0.12484394506866417</ml:real>
+							<ml:real>0.12468827930174564</ml:real>
+							<ml:real>0.12453300124533001</ml:real>
+							<ml:real>0.12437810945273632</ml:real>
+							<ml:real>0.12422360248447205</ml:real>
+							<ml:real>0.12406947890818859</ml:real>
+							<ml:real>0.12391573729863693</ml:real>
+							<ml:real>0.12376237623762376</ml:real>
+							<ml:real>0.12360939431396786</ml:real>
+							<ml:real>0.12345679012345678</ml:real>
+							<ml:real>0.12330456226880394</ml:real>
+							<ml:real>0.12315270935960591</ml:real>
+							<ml:real>0.12300123001230012</ml:real>
+							<ml:real>0.12285012285012285</ml:real>
+							<ml:real>0.12269938650306748</ml:real>
+							<ml:real>0.12254901960784313</ml:real>
+							<ml:real>0.12239902080783353</ml:real>
+							<ml:real>0.12224938875305623</ml:real>
+							<ml:real>0.1221001221001221</ml:real>
+							<ml:real>0.12195121951219512</ml:real>
+							<ml:real>0.1218026796589525</ml:real>
+							<ml:real>0.12165450121654502</ml:real>
+							<ml:real>0.12150668286755771</ml:real>
+							<ml:real>0.12135922330097088</ml:real>
+							<ml:real>0.12121212121212122</ml:real>
+							<ml:real>0.12106537530266344</ml:real>
+							<ml:real>0.12091898428053205</ml:real>
+							<ml:real>0.12077294685990338</ml:real>
+							<ml:real>0.12062726176115803</ml:real>
+							<ml:real>0.12048192771084337</ml:real>
+							<ml:real>0.12033694344163658</ml:real>
+							<ml:real>0.1201923076923077</ml:real>
+							<ml:real>0.12004801920768307</ml:real>
+							<ml:real>0.11990407673860912</ml:real>
+							<ml:real>0.11976047904191617</ml:real>
+							<ml:real>0.11961722488038278</ml:real>
+							<ml:real>0.11947431302270012</ml:real>
+							<ml:real>0.11933174224343675</ml:real>
+							<ml:real>0.11918951132300358</ml:real>
+							<ml:real>0.11904761904761904</ml:real>
+							<ml:real>0.11890606420927467</ml:real>
+							<ml:real>0.11876484560570071</ml:real>
+							<ml:real>0.11862396204033215</ml:real>
+							<ml:real>0.11848341232227488</ml:real>
+							<ml:real>0.11834319526627218</ml:real>
+							<ml:real>0.1182033096926714</ml:real>
+							<ml:real>0.1180637544273908</ml:real>
+							<ml:real>0.11792452830188679</ml:real>
+							<ml:real>0.11778563015312132</ml:real>
+							<ml:real>0.11764705882352941</ml:real>
+							<ml:real>0.11750881316098708</ml:real>
+							<ml:real>0.11737089201877934</ml:real>
+							<ml:real>0.11723329425556858</ml:real>
+							<ml:real>0.117096018735363</ml:real>
+							<ml:real>0.11695906432748537</ml:real>
+							<ml:real>0.11682242990654206</ml:real>
+							<ml:real>0.11668611435239207</ml:real>
+							<ml:real>0.11655011655011655</ml:real>
+							<ml:real>0.11641443538998836</ml:real>
+							<ml:real>0.11627906976744186</ml:real>
+							<ml:real>0.11614401858304298</ml:real>
+							<ml:real>0.11600928074245939</ml:real>
+							<ml:real>0.11587485515643106</ml:real>
+							<ml:real>0.11574074074074074</ml:real>
+							<ml:real>0.11560693641618497</ml:real>
+							<ml:real>0.11547344110854503</ml:real>
+							<ml:real>0.11534025374855825</ml:real>
+							<ml:real>0.1152073732718894</ml:real>
+							<ml:real>0.11507479861910241</ml:real>
+							<ml:real>0.11494252873563218</ml:real>
+							<ml:real>0.11481056257175661</ml:real>
+							<ml:real>0.11467889908256881</ml:real>
+							<ml:real>0.1145475372279496</ml:real>
+							<ml:real>0.11441647597254005</ml:real>
+							<ml:real>0.11428571428571428</ml:real>
+							<ml:real>0.11415525114155251</ml:real>
+							<ml:real>0.11402508551881414</ml:real>
+							<ml:real>0.11389521640091116</ml:real>
+							<ml:real>0.11376564277588168</ml:real>
+							<ml:real>0.11363636363636363</ml:real>
+							<ml:real>0.11350737797956867</ml:real>
+							<ml:real>0.11337868480725624</ml:real>
+							<ml:real>0.11325028312570781</ml:real>
+							<ml:real>0.11312217194570136</ml:real>
+							<ml:real>0.11299435028248588</ml:real>
+							<ml:real>0.11286681715575621</ml:real>
+							<ml:real>0.11273957158962795</ml:real>
+							<ml:real>0.11261261261261261</ml:real>
+							<ml:real>0.1124859392575928</ml:real>
+							<ml:real>0.11235955056179775</ml:real>
+							<ml:real>0.1122334455667789</ml:real>
+							<ml:real>0.11210762331838566</ml:real>
+							<ml:real>0.11198208286674133</ml:real>
+							<ml:real>0.11185682326621924</ml:real>
+							<ml:real>0.11173184357541899</ml:real>
+							<ml:real>0.11160714285714286</ml:real>
+							<ml:real>0.11148272017837235</ml:real>
+							<ml:real>0.111358574610245</ml:real>
+							<ml:real>0.11123470522803114</ml:real>
+							<ml:real>0.11111111111111111</ml:real>
+							<ml:real>0.11098779134295228</ml:real>
+							<ml:real>0.11086474501108648</ml:real>
+							<ml:real>0.11074197120708748</ml:real>
+							<ml:real>0.11061946902654868</ml:real>
+							<ml:real>0.11049723756906077</ml:real>
+							<ml:real>0.11037527593818984</ml:real>
+							<ml:real>0.11025358324145534</ml:real>
+							<ml:real>0.11013215859030837</ml:real>
+							<ml:real>0.11001100110011002</ml:real>
+							<ml:real>0.10989010989010989</ml:real>
+							<ml:real>0.10976948408342481</ml:real>
+							<ml:real>0.10964912280701754</ml:real>
+							<ml:real>0.10952902519167579</ml:real>
+							<ml:real>0.10940919037199125</ml:real>
+							<ml:real>0.10928961748633879</ml:real>
+							<ml:real>0.1091703056768559</ml:real>
+							<ml:real>0.10905125408942203</ml:real>
+							<ml:real>0.10893246187363835</ml:real>
+							<ml:real>0.1088139281828074</ml:real>
+							<ml:real>0.10869565217391304</ml:real>
+							<ml:real>0.10857763300760044</ml:real>
+							<ml:real>0.10845986984815619</ml:real>
+							<ml:real>0.10834236186348863</ml:real>
+							<ml:real>0.10822510822510822</ml:real>
+							<ml:real>0.10810810810810811</ml:real>
+							<ml:real>0.10799136069114471</ml:real>
+							<ml:real>0.10787486515641856</ml:real>
+							<ml:real>0.10775862068965517</ml:real>
+							<ml:real>0.10764262648008612</ml:real>
+							<ml:real>0.10752688172043011</ml:real>
+							<ml:real>0.10741138560687433</ml:real>
+							<ml:real>0.1072961373390558</ml:real>
+							<ml:real>0.10718113612004288</ml:real>
+							<ml:real>0.10706638115631692</ml:real>
+							<ml:real>0.10695187165775401</ml:real>
+							<ml:real>0.10683760683760683</ml:real>
+							<ml:real>0.10672358591248667</ml:real>
+							<ml:real>0.10660980810234541</ml:real>
+							<ml:real>0.10649627263045794</ml:real>
+							<ml:real>0.10638297872340426</ml:real>
+							<ml:real>0.10626992561105207</ml:real>
+							<ml:real>0.10615711252653928</ml:real>
+							<ml:real>0.10604453870625663</ml:real>
+							<ml:real>0.1059322033898305</ml:real>
+							<ml:real>0.10582010582010581</ml:real>
+							<ml:real>0.10570824524312897</ml:real>
+							<ml:real>0.10559662090813093</ml:real>
+							<ml:real>0.10548523206751055</ml:real>
+							<ml:real>0.10537407797681771</ml:real>
+							<ml:real>0.10526315789473684</ml:real>
+							<ml:real>0.10515247108307045</ml:real>
+							<ml:real>0.10504201680672269</ml:real>
+							<ml:real>0.1049317943336831</ml:real>
+							<ml:real>0.10482180293501048</ml:real>
+							<ml:real>0.10471204188481675</ml:real>
+							<ml:real>0.10460251046025104</ml:real>
+							<ml:real>0.1044932079414838</ml:real>
+							<ml:real>0.10438413361169102</ml:real>
+							<ml:real>0.10427528675703858</ml:real>
+							<ml:real>0.10416666666666667</ml:real>
+							<ml:real>0.1040582726326743</ml:real>
+							<ml:real>0.10395010395010396</ml:real>
+							<ml:real>0.10384215991692627</ml:real>
+							<ml:real>0.1037344398340249</ml:real>
+							<ml:real>0.10362694300518134</ml:real>
+							<ml:real>0.10351966873706005</ml:real>
+							<ml:real>0.10341261633919338</ml:real>
+							<ml:real>0.10330578512396695</ml:real>
+							<ml:real>0.10319917440660474</ml:real>
+							<ml:real>0.10309278350515463</ml:real>
+							<ml:real>0.10298661174047374</ml:real>
+							<ml:real>0.102880658436214</ml:real>
+							<ml:real>0.10277492291880781</ml:real>
+							<ml:real>0.10266940451745379</ml:real>
+							<ml:real>0.10256410256410256</ml:real>
+							<ml:real>0.10245901639344263</ml:real>
+							<ml:real>0.10235414534288639</ml:real>
+							<ml:real>0.10224948875255624</ml:real>
+							<ml:real>0.10214504596527069</ml:real>
+							<ml:real>0.10204081632653062</ml:real>
+							<ml:real>0.1019367991845056</ml:real>
+							<ml:real>0.10183299389002037</ml:real>
+							<ml:real>0.10172939979654121</ml:real>
+							<ml:real>0.1016260162601626</ml:real>
+							<ml:real>0.10152284263959391</ml:real>
+							<ml:real>0.10141987829614604</ml:real>
+							<ml:real>0.10131712259371833</ml:real>
+							<ml:real>0.10121457489878542</ml:real>
+							<ml:real>0.10111223458038422</ml:real>
+							<ml:real>0.10101010101010101</ml:real>
+							<ml:real>0.10090817356205853</ml:real>
+							<ml:real>0.10080645161290322</ml:real>
+							<ml:real>0.10070493454179255</ml:real>
+							<ml:real>0.1006036217303823</ml:real>
+							<ml:real>0.10050251256281408</ml:real>
+							<ml:real>0.10040160642570281</ml:real>
+							<ml:real>0.10030090270812438</ml:real>
+							<ml:real>0.10020040080160321</ml:real>
+							<ml:real>0.10010010010010011</ml:real>
+							<ml:real>0.1</ml:real>
+							<ml:real>0.042086459298454011</ml:real>
+							<ml:real>-0.012514919618331797</ml:real>
+							<ml:real>0.016423647995247235</ml:real>
+							<ml:real>0.068533126963133115</ml:real>
+							<ml:real>0.1065764586609752</ml:real>
+							<ml:real>0.037016714156401627</ml:real>
+							<ml:real>-0.035539046292268561</ml:real>
+							<ml:real>-0.013054874108114628</ml:real>
+							<ml:real>0.045934355361078781</ml:real>
+							<ml:real>0.017235333385096654</ml:real>
+							<ml:real>0.038033028256139488</ml:real>
+							<ml:real>0.078620242927649311</ml:real>
+							<ml:real>0.10656685928934999</ml:real>
+							<ml:real>0.021950058959316482</ml:real>
+							<ml:real>0.05177392412934767</ml:real>
+							<ml:real>0.10934841209406473</ml:real>
+							<ml:real>0.030593105187525046</ml:real>
+							<ml:real>-0.053960235678138756</ml:real>
+							<ml:real>0.044704505181845995</ml:real>
+							<ml:real>0.02862639306311647</ml:real>
+							<ml:real>0.057902851341069539</ml:real>
+							<ml:real>0.030504316977197281</ml:real>
+							<ml:real>0.096343292454956486</ml:real>
+							<ml:real>-0.018027707466724687</ml:real>
+							<ml:real>-0.03631072547746856</ml:real>
+							<ml:real>0.066134257297762233</ml:real>
+							<ml:real>0.066820930049042465</ml:real>
+							<ml:real>0.066431582240007669</ml:real>
+							<ml:real>0.012410836751649246</ml:real>
+							<ml:real>0.027597910968991283</ml:real>
+							<ml:real>-0.014545139424451544</ml:real>
+							<ml:real>-0.00020739063375020881</ml:real>
+							<ml:real>0.0045271677001633452</ml:real>
+							<ml:real>-0.00088480161518656613</ml:real>
+							<ml:real>-0.02168351294875075</ml:real>
+							<ml:real>0.021716971190008937</ml:real>
+							<ml:real>0.024470652415893534</ml:real>
+							<ml:real>0.011979406194117144</ml:real>
+							<ml:real>0.0053653762956099322</ml:real>
+							<ml:real>0.073868393734462287</ml:real>
+							<ml:real>-0.0017248357035477859</ml:real>
+							<ml:real>0.00787491344869209</ml:real>
+							<ml:real>0.02580860197574501</ml:real>
+							<ml:real>0.037037966068485688</ml:real>
+							<ml:real>0.016695607965091029</ml:real>
+							<ml:real>0.072479245728576766</ml:real>
+							<ml:real>0.0327542074805381</ml:real>
+							<ml:real>0.029956657993156062</ml:real>
+							<ml:real>-0.015911460923964168</ml:real>
+							<ml:real>0.05220775165648471</ml:real>
+							<ml:real>0.059646677846479035</ml:real>
+							<ml:real>0.094432327304530966</ml:real>
+							<ml:real>-0.0029240992916045238</ml:real>
+							<ml:real>0.041604417372814624</ml:real>
+							<ml:real>0.034982651386900633</ml:real>
+							<ml:real>0.021346596101596095</ml:real>
+							<ml:real>0.037145020168470107</ml:real>
+							<ml:real>0.0581308201459027</ml:real>
+							<ml:real>0.024578798435479665</ml:real>
+							<ml:real>0.05855058672629241</ml:real>
+							<ml:real>0.03179565021399073</ml:real>
+							<ml:real>0.059485632166467343</ml:real>
+							<ml:real>0.0616705030340985</ml:real>
+							<ml:real>0.024510125755166968</ml:real>
+							<ml:real>0.039389555287873176</ml:real>
+							<ml:real>0.060546487267001944</ml:real>
+							<ml:real>0.058222719892478625</ml:real>
+							<ml:real>0.10945319663284724</ml:real>
+							<ml:real>0.078659030685129874</ml:real>
+							<ml:real>0.084399398480714968</ml:real>
+							<ml:real>0.010893655808630531</ml:real>
+							<ml:real>0.020129465374079985</ml:real>
+							<ml:real>-0.0053941562638298362</ml:real>
+							<ml:real>0.023538532502544382</ml:real>
+							<ml:real>-0.0045812439910933155</ml:real>
+							<ml:real>-0.012008565033470966</ml:real>
+							<ml:real>0.034593593520871692</ml:real>
+							<ml:real>0.068899875850112854</ml:real>
+							<ml:real>0.060756218154701939</ml:real>
+							<ml:real>0.04097349563832995</ml:real>
+							<ml:real>-0.013763602934604763</ml:real>
+							<ml:real>-0.018079494901793877</ml:real>
+							<ml:real>0.030413291549903639</ml:real>
+							<ml:real>0.035526896140887013</ml:real>
+							<ml:real>0.025061790528283955</ml:real>
+							<ml:real>0.024379377335002898</ml:real>
+							<ml:real>0.045156785914747109</ml:real>
+							<ml:real>0.040449641169115938</ml:real>
+							<ml:real>0.021539762548549075</ml:real>
+							<ml:real>0.044523754095275675</ml:real>
+							<ml:real>0.02381896896993093</ml:real>
+							<ml:real>-0.01915845225105358</ml:real>
+							<ml:real>0.021521503433240174</ml:real>
+							<ml:real>0.072406831503322958</ml:real>
+							<ml:real>-0.05342346502133484</ml:real>
+							<ml:real>0.055247199110496054</ml:real>
+							<ml:real>-0.006175450433961286</ml:real>
+							<ml:real>0.049968221114528671</ml:real>
+							<ml:real>-0.0042819413815556985</ml:real>
+							<ml:real>0.033047561668933474</ml:real>
+							<ml:real>0.02425728594135056</ml:real>
+							<ml:real>0.0070484703261035793</ml:real>
+							<ml:real>0.0061336719704168513</ml:real>
+							<ml:real>0.10272918802343653</ml:real>
+							<ml:real>0.021423174949464229</ml:real>
+							<ml:real>0.07066574248853684</ml:real>
+							<ml:real>-0.034549657855267563</ml:real>
+							<ml:real>-0.031816721555566356</ml:real>
+							<ml:real>0.0579402561276092</ml:real>
+							<ml:real>0.060129170256897284</ml:real>
+							<ml:real>0.037063897832585534</ml:real>
+							<ml:real>0.0036408246478644526</ml:real>
+							<ml:real>0.039138431307971969</ml:real>
+							<ml:real>0.014159621724454678</ml:real>
+							<ml:real>0.033864078072886522</ml:real>
+							<ml:real>0.036529495365974607</ml:real>
+							<ml:real>0.06339983697207334</ml:real>
+							<ml:real>0.033955344985257804</ml:real>
+							<ml:real>0.0031249129407842405</ml:real>
+							<ml:real>0.0023806333687905251</ml:real>
+							<ml:real>0.020059842470644879</ml:real>
+							<ml:real>0.016787700847548631</ml:real>
+							<ml:real>-0.0073265447726158376</ml:real>
+							<ml:real>0.056769314701239554</ml:real>
+							<ml:real>0.015954195643671631</ml:real>
+							<ml:real>0.026452599034805135</ml:real>
+							<ml:real>-0.016996426775782243</ml:real>
+							<ml:real>0.044542313216064264</ml:real>
+							<ml:real>0.044131817853485647</ml:real>
+							<ml:real>0.0755288432076864</ml:real>
+							<ml:real>-0.014050639952399571</ml:real>
+							<ml:real>0.033757004275648386</ml:real>
+							<ml:real>0.032947620404228488</ml:real>
+							<ml:real>0.0480296390237985</ml:real>
+							<ml:real>0.00026730827992873797</ml:real>
+							<ml:real>0.056678780076646437</ml:real>
+							<ml:real>0.019504579748194834</ml:real>
+							<ml:real>0.031632054051123952</ml:real>
+							<ml:real>0.0031724314314216938</ml:real>
+							<ml:real>0.087954431614210779</ml:real>
+							<ml:real>0.07698106133459387</ml:real>
+							<ml:real>0.019781913957669015</ml:real>
+							<ml:real>0.0223509567447877</ml:real>
+							<ml:real>-0.0062568964293276061</ml:real>
+							<ml:real>0.0010385085063813286</ml:real>
+							<ml:real>0.041460209905457762</ml:real>
+							<ml:real>0.035154055956124877</ml:real>
+							<ml:real>0.07328370010024754</ml:real>
+							<ml:real>0.029955195516362276</ml:real>
+							<ml:real>0.0099625606732486448</ml:real>
+							<ml:real>0.035446209932474729</ml:real>
+							<ml:real>0.060280370452176227</ml:real>
+							<ml:real>0.05051471387223376</ml:real>
+							<ml:real>-0.041200330595865878</ml:real>
+							<ml:real>0.035989637014526767</ml:real>
+							<ml:real>0.074418013971937369</ml:real>
+							<ml:real>0.044172079128959374</ml:real>
+							<ml:real>0.053505854872758496</ml:real>
+							<ml:real>0.076381811212372031</ml:real>
+							<ml:real>0.02959264635526972</ml:real>
+							<ml:real>0.01264663651711472</ml:real>
+							<ml:real>0.0062743211656909543</ml:real>
+							<ml:real>0.020703458768523059</ml:real>
+							<ml:real>0.059289334364907173</ml:real>
+							<ml:real>-0.0086227238187895627</ml:real>
+							<ml:real>0.03782953540300503</ml:real>
+							<ml:real>0.028105971823815627</ml:real>
+							<ml:real>0.075542948603117888</ml:real>
+							<ml:real>0.050179688654393304</ml:real>
+							<ml:real>0.0576374844077629</ml:real>
+							<ml:real>0.039037947398767057</ml:real>
+							<ml:real>0.00061044932326297368</ml:real>
+							<ml:real>0.022054973934296937</ml:real>
+							<ml:real>0.032234317956079665</ml:real>
+							<ml:real>0.046299857147569484</ml:real>
+							<ml:real>0.021424923275362773</ml:real>
+							<ml:real>0.059039420796364608</ml:real>
+							<ml:real>0.01811359884640347</ml:real>
+							<ml:real>0.030150186075075417</ml:real>
+							<ml:real>0.050638312404583524</ml:real>
+							<ml:real>0.0291284620958841</ml:real>
+							<ml:real>0.027013018170296207</ml:real>
+							<ml:real>0.01412193467932318</ml:real>
+							<ml:real>0.016002513746820272</ml:real>
+							<ml:real>0.025694386550646323</ml:real>
+							<ml:real>0.029328830744505895</ml:real>
+							<ml:real>0.013839733124364045</ml:real>
+							<ml:real>0.012352003002147768</ml:real>
+							<ml:real>0.0976474866550175</ml:real>
+							<ml:real>0.017794257738794953</ml:real>
+							<ml:real>0.041600287518890666</ml:real>
+							<ml:real>-0.0046959248958293046</ml:real>
+							<ml:real>0.033288631028756566</ml:real>
+							<ml:real>0.03045876401291054</ml:real>
+							<ml:real>0.031998643770213282</ml:real>
+							<ml:real>0.082643575494883659</ml:real>
+							<ml:real>0.04260307772196175</ml:real>
+							<ml:real>0.052483188274282853</ml:real>
+							<ml:real>0.0157243931040149</ml:real>
+							<ml:real>0.01295938667646354</ml:real>
+							<ml:real>0.034088282790275481</ml:real>
+							<ml:real>0.013482025380369047</ml:real>
+							<ml:real>0.015037296951931373</ml:real>
+							<ml:real>0.02799271548678698</ml:real>
+							<ml:real>0.0934507969815303</ml:real>
+							<ml:real>0.043482494330636529</ml:real>
+							<ml:real>0.02334585174348356</ml:real>
+							<ml:real>0.054890779854702511</ml:real>
+							<ml:real>-0.021503629381774404</ml:real>
+							<ml:real>0.059040653170172271</ml:real>
+							<ml:real>0.0082155000468785381</ml:real>
+							<ml:real>0.013654997215897672</ml:real>
+							<ml:real>-0.0093585621406398981</ml:real>
+							<ml:real>0.032638245936911933</ml:real>
+							<ml:real>0.040027311002829871</ml:real>
+							<ml:real>0.067213784546816813</ml:real>
+							<ml:real>0.056976028788180061</ml:real>
+							<ml:real>0.061664952293427965</ml:real>
+							<ml:real>0.066739752243828054</ml:real>
+							<ml:real>0.014654004063075835</ml:real>
+							<ml:real>0.02407722052323806</ml:real>
+							<ml:real>0.037750080076331613</ml:real>
+							<ml:real>0.036730953984517235</ml:real>
+							<ml:real>0.049287466515205172</ml:real>
+							<ml:real>0.01855150137653102</ml:real>
+							<ml:real>0.030341871584212567</ml:real>
+							<ml:real>0.017434370081766078</ml:real>
+							<ml:real>0.083137449548420825</ml:real>
+							<ml:real>0.0601605981011278</ml:real>
+							<ml:real>0.0010885488831533135</ml:real>
+							<ml:real>0.050474416969215147</ml:real>
+							<ml:real>0.0050077039824465387</ml:real>
+							<ml:real>0.0054033663009655369</ml:real>
+							<ml:real>0.0054238559588724511</ml:real>
+							<ml:real>0.0014744981364290788</ml:real>
+							<ml:real>0.029796261372450221</ml:real>
+							<ml:real>0.023348865540911347</ml:real>
+							<ml:real>0.068596668379881931</ml:real>
+							<ml:real>0.026213994720046551</ml:real>
+							<ml:real>0.032580103672731613</ml:real>
+							<ml:real>0.023096663007141152</ml:real>
+							<ml:real>0.048202067429975209</ml:real>
+							<ml:real>0.045202944683208568</ml:real>
+							<ml:real>0.035224918333634753</ml:real>
+							<ml:real>0.029221540799231897</ml:real>
+							<ml:real>0.057100761272717133</ml:real>
+							<ml:real>0.032735277257320138</ml:real>
+							<ml:real>0.024241259440602719</ml:real>
+							<ml:real>0.10039119754409318</ml:real>
+							<ml:real>0.030979711164084319</ml:real>
+							<ml:real>0.056925300511622944</ml:real>
+							<ml:real>0.0027901632885267325</ml:real>
+							<ml:real>0.015691131607084751</ml:real>
+							<ml:real>-0.0080842004479453732</ml:real>
+							<ml:real>0.043450437919699367</ml:real>
+							<ml:real>0.01150600413638009</ml:real>
+							<ml:real>0.0066060810149346609</ml:real>
+							<ml:real>0.068237531863786283</ml:real>
+							<ml:real>0.031186078764906113</ml:real>
+							<ml:real>0.0054862221379750019</ml:real>
+							<ml:real>0.065729379733781984</ml:real>
+							<ml:real>0.038337202352742183</ml:real>
+							<ml:real>-0.0050199634747576695</ml:real>
+							<ml:real>0.016550867257485603</ml:real>
+							<ml:real>0.025613233489579154</ml:real>
+							<ml:real>0.052031238719088012</ml:real>
+							<ml:real>-0.0056315097871183009</ml:real>
+							<ml:real>0.026686823063310862</ml:real>
+							<ml:real>0.035630730783431937</ml:real>
+							<ml:real>0.014131895285055421</ml:real>
+							<ml:real>0.041847975347200847</ml:real>
+							<ml:real>0.041067352517094653</ml:real>
+							<ml:real>0.035947629824034683</ml:real>
+							<ml:real>0.039846939339114512</ml:real>
+							<ml:real>0.034193803384141179</ml:real>
+							<ml:real>-0.0019180600641546676</ml:real>
+							<ml:real>-0.01360830922330381</ml:real>
+							<ml:real>-0.037137350009846755</ml:real>
+							<ml:real>0.069395448417055833</ml:real>
+							<ml:real>0.021732487868727387</ml:real>
+							<ml:real>0.037104433869023123</ml:real>
+							<ml:real>0.043809223605599273</ml:real>
+							<ml:real>0.037330728523523</ml:real>
+							<ml:real>0.081154539073632542</ml:real>
+							<ml:real>0.023258436563661746</ml:real>
+							<ml:real>0.012940050534828126</ml:real>
+							<ml:real>0.0026325316941812086</ml:real>
+							<ml:real>0.049884796437240073</ml:real>
+							<ml:real>0.00053968548105641457</ml:real>
+							<ml:real>0.020790218884204292</ml:real>
+							<ml:real>0.073375613029712891</ml:real>
+							<ml:real>-0.040139025736568405</ml:real>
+							<ml:real>-0.038349311975692038</ml:real>
+							<ml:real>0.010931369977854233</ml:real>
+							<ml:real>0.051940688576772094</ml:real>
+							<ml:real>0.0016648523561852116</ml:real>
+							<ml:real>0.0406191009847449</ml:real>
+							<ml:real>-0.0070280867635044613</ml:real>
+							<ml:real>0.067160465239945191</ml:real>
+							<ml:real>0.021023942614581955</ml:real>
+							<ml:real>0.011612866722029394</ml:real>
+							<ml:real>0.039013426712136846</ml:real>
+							<ml:real>0.068698198190639229</ml:real>
+							<ml:real>-0.025593858166764724</ml:real>
+							<ml:real>0.088518956219823808</ml:real>
+							<ml:real>0.0029515430040558351</ml:real>
+							<ml:real>0.0270316733884025</ml:real>
+							<ml:real>-0.00051230738301961639</ml:real>
+							<ml:real>0.033363380795629526</ml:real>
+							<ml:real>0.0189715046818798</ml:real>
+							<ml:real>0.041083667422338495</ml:real>
+							<ml:real>0.025104979044895757</ml:real>
+							<ml:real>0.049478765620043309</ml:real>
+							<ml:real>0.0098208313718578261</ml:real>
+							<ml:real>0.0257684500072389</ml:real>
+							<ml:real>0.025557311417882207</ml:real>
+							<ml:real>0.035027208854402032</ml:real>
+							<ml:real>0.055137386344503145</ml:real>
+							<ml:real>0.02695932942973777</ml:real>
+							<ml:real>0.0628960853075565</ml:real>
+							<ml:real>-0.0178315486566365</ml:real>
+							<ml:real>0.0678002419775648</ml:real>
+							<ml:real>0.072467239027626654</ml:real>
+							<ml:real>0.045565264954106961</ml:real>
+							<ml:real>0.075571712190695528</ml:real>
+							<ml:real>0.062307229117065904</ml:real>
+							<ml:real>0.0302443264222712</ml:real>
+							<ml:real>0.0048205504995776595</ml:real>
+							<ml:real>0.023826254753998473</ml:real>
+							<ml:real>-0.033637349407492946</ml:real>
+							<ml:real>0.063819004962484369</ml:real>
+							<ml:real>0.063975060944409842</ml:real>
+							<ml:real>-0.0048707925839130382</ml:real>
+							<ml:real>0.035124085821011071</ml:real>
+							<ml:real>0.1017852075017025</ml:real>
+							<ml:real>0.00837060645739046</ml:real>
+							<ml:real>0.0319174961595011</ml:real>
+							<ml:real>-0.0021382304179251728</ml:real>
+							<ml:real>0.012710500443771384</ml:real>
+							<ml:real>0.010134780712795595</ml:real>
+							<ml:real>0.035539706447251351</ml:real>
+							<ml:real>0.042052945258428037</ml:real>
+							<ml:real>0.026956511410597971</ml:real>
+							<ml:real>0.030587987878801574</ml:real>
+							<ml:real>0.059464645588692307</ml:real>
+							<ml:real>0.047205750529266219</ml:real>
+							<ml:real>0.0519649366837439</ml:real>
+							<ml:real>0.0053085740818349381</ml:real>
+							<ml:real>0.058570516615931004</ml:real>
+							<ml:real>0.020923154067062782</ml:real>
+							<ml:real>0.035993732157487857</ml:real>
+							<ml:real>0.04633426496061302</ml:real>
+							<ml:real>0.0643149912008283</ml:real>
+							<ml:real>0.067632008183924924</ml:real>
+							<ml:real>-0.0029165543242298734</ml:real>
+							<ml:real>0.0047803676495073392</ml:real>
+							<ml:real>0.03569226916197122</ml:real>
+							<ml:real>0.032411063732842041</ml:real>
+							<ml:real>-0.0073186093205070005</ml:real>
+							<ml:real>-0.0020217697111493448</ml:real>
+							<ml:real>-0.012949303504250186</ml:real>
+							<ml:real>0.016901592676755558</ml:real>
+							<ml:real>0.0091201594985121787</ml:real>
+							<ml:real>0.013343607376097442</ml:real>
+							<ml:real>0.061187896455397905</ml:real>
+							<ml:real>0.0704392589827994</ml:real>
+							<ml:real>0.066125807412488233</ml:real>
+							<ml:real>0.0059195769479933689</ml:real>
+							<ml:real>0.016307989032308411</ml:real>
+							<ml:real>0.0081372521717477855</ml:real>
+							<ml:real>0.013458131009033151</ml:real>
+							<ml:real>-0.058074631516728696</ml:real>
+							<ml:real>0.016646299021795579</ml:real>
+							<ml:real>0.031127652738240728</ml:real>
+							<ml:real>0.032457909001317641</ml:real>
+							<ml:real>0.03626610403905263</ml:real>
+							<ml:real>0.011058241912618628</ml:real>
+							<ml:real>0.01150976122889878</ml:real>
+							<ml:real>0.084188107530368969</ml:real>
+							<ml:real>0.0036256193805464802</ml:real>
+							<ml:real>0.017749501800663262</ml:real>
+							<ml:real>0.021093514137864235</ml:real>
+							<ml:real>0.03852150013536982</ml:real>
+							<ml:real>0.067978189941511516</ml:real>
+							<ml:real>0.033274351181150873</ml:real>
+							<ml:real>0.031928329377295943</ml:real>
+							<ml:real>0.021025368572275924</ml:real>
+							<ml:real>-0.034889336305519207</ml:real>
+							<ml:real>0.016201185124470937</ml:real>
+							<ml:real>0.088924839146426335</ml:real>
+							<ml:real>0.051605379178903017</ml:real>
+							<ml:real>0.050229058981469732</ml:real>
+							<ml:real>0.039419953276423808</ml:real>
+							<ml:real>0.0083903728281326546</ml:real>
+							<ml:real>0.010062233889867</ml:real>
+							<ml:real>0.029113898975702317</ml:real>
+							<ml:real>0.048446827637266508</ml:real>
+							<ml:real>-0.043278544180873749</ml:real>
+							<ml:real>0.047645595493697075</ml:real>
+							<ml:real>-0.005278410998894807</ml:real>
+							<ml:real>0.033135209725760506</ml:real>
+							<ml:real>0.021794682159105121</ml:real>
+							<ml:real>0.0458641094796241</ml:real>
+							<ml:real>0.027620583244785619</ml:real>
+							<ml:real>0.020528850501752856</ml:real>
+							<ml:real>0.074487821795279754</ml:real>
+							<ml:real>0.068130607970849882</ml:real>
+							<ml:real>0.029064514017825342</ml:real>
+							<ml:real>-0.021882823647407935</ml:real>
+							<ml:real>0.035108776377607155</ml:real>
+							<ml:real>0.057828919732951171</ml:real>
+							<ml:real>-0.033878708357935695</ml:real>
+							<ml:real>-7.0233664385274257E-05</ml:real>
+							<ml:real>0.031164391107471628</ml:real>
+							<ml:real>0.04141804442862345</ml:real>
+							<ml:real>0.011215414659719321</ml:real>
+							<ml:real>4.7513797630467823E-05</ml:real>
+							<ml:real>0.029830005717521577</ml:real>
+							<ml:real>0.019583602305656134</ml:real>
+							<ml:real>0.041138897440406517</ml:real>
+							<ml:real>0.051099001875927239</ml:real>
+							<ml:real>0.038249587622395213</ml:real>
+							<ml:real>0.031171395541384733</ml:real>
+							<ml:real>0.0568156997850447</ml:real>
+							<ml:real>0.0028285774549667137</ml:real>
+							<ml:real>0.036036392510161469</ml:real>
+							<ml:real>0.004864649480437533</ml:real>
+							<ml:real>-0.025351839328591971</ml:real>
+							<ml:real>0.032799625346035359</ml:real>
+							<ml:real>0.065634015252512667</ml:real>
+							<ml:real>0.048264764518566358</ml:real>
+							<ml:real>0.022484557049133311</ml:real>
+							<ml:real>0.046613155122331988</ml:real>
+							<ml:real>0.11251726843679009</ml:real>
+							<ml:real>-0.0050610351821517444</ml:real>
+							<ml:real>0.026110158371983622</ml:real>
+							<ml:real>-0.015088722199760039</ml:real>
+							<ml:real>-0.022667032005102079</ml:real>
+							<ml:real>0.041891837371677822</ml:real>
+							<ml:real>0.013871497482742488</ml:real>
+							<ml:real>0.042240628906231766</ml:real>
+							<ml:real>0.018967081926084421</ml:real>
+							<ml:real>0.049832258213078552</ml:real>
+							<ml:real>0.04363801499807661</ml:real>
+							<ml:real>-0.0092398498199265239</ml:real>
+							<ml:real>0.027581468233480788</ml:real>
+							<ml:real>0.0599284697997988</ml:real>
+							<ml:real>-0.0028535698706920127</ml:real>
+							<ml:real>0.023446574487846976</ml:real>
+							<ml:real>0.05454624169867435</ml:real>
+							<ml:real>0.051235029222792015</ml:real>
+							<ml:real>0.037374320057612272</ml:real>
+							<ml:real>0.055821896038230442</ml:real>
+							<ml:real>0.095800946003640378</ml:real>
+							<ml:real>0.0012403733117504433</ml:real>
+							<ml:real>0.0099294662787944889</ml:real>
+							<ml:real>0.057782557862397672</ml:real>
+							<ml:real>-0.0011457548914476806</ml:real>
+							<ml:real>0.044605321180523981</ml:real>
+							<ml:real>0.01178150273101981</ml:real>
+							<ml:real>0.0099742284168642427</ml:real>
+							<ml:real>-0.0054492362390346242</ml:real>
+							<ml:real>0.073874591205924309</ml:real>
+							<ml:real>0.05105233412000415</ml:real>
+							<ml:real>0.0296322212113476</ml:real>
+							<ml:real>-0.015443939078589165</ml:real>
+							<ml:real>-0.00892461897379485</ml:real>
+							<ml:real>0.035378899859965007</ml:real>
+							<ml:real>0.013758769681443515</ml:real>
+							<ml:real>0.03125772067522057</ml:real>
+							<ml:real>-0.10055524411965808</ml:real>
+							<ml:real>0.032097685199312838</ml:real>
+							<ml:real>0.0667734921547663</ml:real>
+							<ml:real>0.0070943516691140485</ml:real>
+							<ml:real>0.0037592231275184011</ml:real>
+							<ml:real>0.024948854707960925</ml:real>
+							<ml:real>0.043183241828255128</ml:real>
+							<ml:real>0.0042648693373205813</ml:real>
+							<ml:real>0.027325661538324428</ml:real>
+							<ml:real>0.083866671862616288</ml:real>
+							<ml:real>0.0016504739840805052</ml:real>
+							<ml:real>0.048565517143483707</ml:real>
+							<ml:real>-0.022802145435387725</ml:real>
+							<ml:real>0.021063421529779011</ml:real>
+							<ml:real>0.025319333928154164</ml:real>
+							<ml:real>0.099195829540970032</ml:real>
+							<ml:real>-0.019747090126863227</ml:real>
+							<ml:real>0.028581247626137306</ml:real>
+							<ml:real>0.027053244128781306</ml:real>
+							<ml:real>0.010631653788500485</ml:real>
+							<ml:real>0.028139991590209086</ml:real>
+							<ml:real>0.018845480391560657</ml:real>
+							<ml:real>0.052003161984026047</ml:real>
+							<ml:real>0.0999485443512754</ml:real>
+							<ml:real>0.0013882141592401606</ml:real>
+							<ml:real>0.050840678674971322</ml:real>
+							<ml:real>-0.0084086582760331853</ml:real>
+							<ml:real>-0.0069335246160633366</ml:real>
+							<ml:real>0.057659850471379614</ml:real>
+							<ml:real>-0.0074415385377755222</ml:real>
+							<ml:real>-0.00087001204990591391</ml:real>
+							<ml:real>0.047685409915276256</ml:real>
+							<ml:real>0.084145239587106679</ml:real>
+							<ml:real>0.036021334815588939</ml:real>
+							<ml:real>0.023627932712595594</ml:real>
+							<ml:real>0.039938545287247725</ml:real>
+							<ml:real>0.038422998300067977</ml:real>
+							<ml:real>0.058031577170348514</ml:real>
+							<ml:real>0.041989499493135143</ml:real>
+							<ml:real>0.015651941751065282</ml:real>
+							<ml:real>-0.020900373966790328</ml:real>
+							<ml:real>0.048804027394806257</ml:real>
+							<ml:real>0.061428728713111724</ml:real>
+							<ml:real>0.0024984068659705864</ml:real>
+							<ml:real>0.051921463389806473</ml:real>
+							<ml:real>-0.017324930215026603</ml:real>
+							<ml:real>0.096887540884314727</ml:real>
+							<ml:real>-0.0061590628838904963</ml:real>
+							<ml:real>0.059078411025938506</ml:real>
+							<ml:real>0.00888510147563894</ml:real>
+							<ml:real>-0.012759210207153078</ml:real>
+							<ml:real>0.037680232733939334</ml:real>
+							<ml:real>-0.0081265853007881032</ml:real>
+							<ml:real>0.029268644948761482</ml:real>
+							<ml:real>0.042778554350672966</ml:real>
+							<ml:real>-0.00072967729957033856</ml:real>
+							<ml:real>0.014908914737731139</ml:real>
+							<ml:real>-0.0084596889116464024</ml:real>
+							<ml:real>-0.061915580669203767</ml:real>
+							<ml:real>0.055486612909221446</ml:real>
+							<ml:real>-0.043597876682811537</ml:real>
+							<ml:real>0.048987496840831396</ml:real>
+							<ml:real>0.02269071172086741</ml:real>
+							<ml:real>-0.040577086801605253</ml:real>
+							<ml:real>0.07081376933226706</ml:real>
+							<ml:real>-0.0043495605834365271</ml:real>
+							<ml:real>0.028679117805792995</ml:real>
+							<ml:real>0.051394217773890832</ml:real>
+							<ml:real>0.0239682069541239</ml:real>
+							<ml:real>0.027405196133210446</ml:real>
+							<ml:real>0.055097129775843127</ml:real>
+							<ml:real>0.047497230154735857</ml:real>
+							<ml:real>0.0060166336446745208</ml:real>
+							<ml:real>0.061807892103615744</ml:real>
+							<ml:real>0.035327114928126138</ml:real>
+							<ml:real>0.046854640230677674</ml:real>
+							<ml:real>0.0016916225876736123</ml:real>
+							<ml:real>0.0967507734897033</ml:real>
+							<ml:real>0.014789193505256041</ml:real>
+							<ml:real>0.026071163158313759</ml:real>
+							<ml:real>0.059720389222516046</ml:real>
+							<ml:real>0.00035310676910422367</ml:real>
+							<ml:real>0.022257178915283948</ml:real>
+							<ml:real>0.0090487830705868778</ml:real>
+							<ml:real>0.020626934213227966</ml:real>
+							<ml:real>0.034659610864438271</ml:real>
+							<ml:real>0.0037650580017723253</ml:real>
+							<ml:real>-0.023890993122149623</ml:real>
+							<ml:real>0.03975688349658555</ml:real>
+							<ml:real>-0.042725605088460177</ml:real>
+							<ml:real>0.039103597118971274</ml:real>
+							<ml:real>0.007278053797816866</ml:real>
+							<ml:real>-0.017979849687869389</ml:real>
+							<ml:real>0.028901220124450379</ml:real>
+							<ml:real>0.033791303987891645</ml:real>
+							<ml:real>0.040430652417863457</ml:real>
+							<ml:real>0.039540499343653175</ml:real>
+							<ml:real>0.11691113370502117</ml:real>
+							<ml:real>0.055116400404106737</ml:real>
+							<ml:real>0.083834047588978888</ml:real>
+							<ml:real>0.065098059622646823</ml:real>
+							<ml:real>0.074999547828846</ml:real>
+							<ml:real>0.019717599076676782</ml:real>
+							<ml:real>0.056089841423710089</ml:real>
+							<ml:real>0.033233046116698112</ml:real>
+							<ml:real>-0.00019431884800973044</ml:real>
+							<ml:real>0.059332214126385438</ml:real>
+							<ml:real>0.021299193834393063</ml:real>
+							<ml:real>-0.028302490701213569</ml:real>
+							<ml:real>0.06123931914150086</ml:real>
+							<ml:real>0.017304322891177556</ml:real>
+							<ml:real>0.019019851520305043</ml:real>
+							<ml:real>0.038426152027524252</ml:real>
+							<ml:real>0.030260290919558661</ml:real>
+							<ml:real>0.0075954997282105287</ml:real>
+							<ml:real>-0.047529697806498586</ml:real>
+							<ml:real>0.0658535023713516</ml:real>
+							<ml:real>0.014202325830963473</ml:real>
+							<ml:real>0.038715524620928914</ml:real>
+							<ml:real>0.000707899713701959</ml:real>
+							<ml:real>-0.0056476373219736227</ml:real>
+							<ml:real>0.023702012507975035</ml:real>
+							<ml:real>0.030406615845394672</ml:real>
+							<ml:real>-0.0059065171613620487</ml:real>
+							<ml:real>0.10263537079718607</ml:real>
+							<ml:real>0.063760083228041553</ml:real>
+							<ml:real>-0.0046131297693912847</ml:real>
+							<ml:real>-0.02322635264772881</ml:real>
+							<ml:real>0.051381905750916952</ml:real>
+							<ml:real>0.0228263789855675</ml:real>
+							<ml:real>0.020590510554102166</ml:real>
+							<ml:real>0.051895588520382042</ml:real>
+							<ml:real>0.0015347403304926527</ml:real>
+							<ml:real>-0.018231942619272985</ml:real>
+							<ml:real>-0.016207428234743575</ml:real>
+							<ml:real>-0.0042743112127974657</ml:real>
+							<ml:real>0.02150332091374059</ml:real>
+							<ml:real>0.020868824111122466</ml:real>
+							<ml:real>0.057057349649848772</ml:real>
+							<ml:real>0.05582711741668947</ml:real>
+							<ml:real>0.044891911032069458</ml:real>
+							<ml:real>0.02394782022594219</ml:real>
+							<ml:real>0.027064985830253904</ml:real>
+							<ml:real>0.027684200923707068</ml:real>
+							<ml:real>0.049711883135565987</ml:real>
+							<ml:real>-0.007376953490681658</ml:real>
+							<ml:real>-0.009332305773085036</ml:real>
+							<ml:real>0.073435821648485042</ml:real>
+							<ml:real>-0.019314646851171614</ml:real>
+							<ml:real>0.051374956234189355</ml:real>
+							<ml:real>0.048508599112893909</ml:real>
+							<ml:real>-0.011430249174348308</ml:real>
+							<ml:real>0.018348953895919212</ml:real>
+							<ml:real>0.0631309472624939</ml:real>
+							<ml:real>0.058645442621574874</ml:real>
+							<ml:real>-0.028029622537557038</ml:real>
+							<ml:real>0.0056214579129484346</ml:real>
+							<ml:real>0.062487729495333405</ml:real>
+							<ml:real>0.080387595951959545</ml:real>
+							<ml:real>0.0523540520207824</ml:real>
+							<ml:real>-0.011575803477572111</ml:real>
+							<ml:real>0.0917512167452326</ml:real>
+							<ml:real>0.041831533755827106</ml:real>
+							<ml:real>-0.010619317696370294</ml:real>
+							<ml:real>0.014324870082459411</ml:real>
+							<ml:real>3.443436407076006E-05</ml:real>
+							<ml:real>-0.0023930117489751306</ml:real>
+							<ml:real>0.04074670552126438</ml:real>
+							<ml:real>0.027880003825952772</ml:real>
+							<ml:real>-0.0041777676132675858</ml:real>
+							<ml:real>0.07488236624394505</ml:real>
+							<ml:real>0.023598357553526073</ml:real>
+							<ml:real>0.036694975916228258</ml:real>
+							<ml:real>-0.056017317612323</ml:real>
+							<ml:real>0.0773817851630538</ml:real>
+							<ml:real>0.060316741413289007</ml:real>
+							<ml:real>0.0053612976036934192</ml:real>
+							<ml:real>-0.036698907882185224</ml:real>
+							<ml:real>0.012322174262122267</ml:real>
+							<ml:real>0.11161780565151314</ml:real>
+							<ml:real>0.031000073761223587</ml:real>
+							<ml:real>0.047726649319751416</ml:real>
+							<ml:real>-0.02606174755530509</ml:real>
+							<ml:real>0.026635571918240515</ml:real>
+							<ml:real>0.06796075581524319</ml:real>
+							<ml:real>0.014544663808012025</ml:real>
+							<ml:real>0.029424912451187949</ml:real>
+							<ml:real>0.01269402779755948</ml:real>
+							<ml:real>-0.040541006012434364</ml:real>
+							<ml:real>0.034809438064129193</ml:real>
+							<ml:real>0.025860037115055065</ml:real>
+							<ml:real>0.047460051956095574</ml:real>
+							<ml:real>0.019703519414334889</ml:real>
+							<ml:real>0.033296213438685024</ml:real>
+							<ml:real>0.0010704021694008651</ml:real>
+							<ml:real>0.0027780108342013144</ml:real>
+							<ml:real>0.09225879379233877</ml:real>
+							<ml:real>0.028766015755683754</ml:real>
+							<ml:real>-0.019365982869155855</ml:real>
+							<ml:real>0.082098551411162013</ml:real>
+							<ml:real>0.026820633228180003</ml:real>
+							<ml:real>0.027760304010948027</ml:real>
+							<ml:real>0.022374350874267639</ml:real>
+							<ml:real>0.0399783099679943</ml:real>
+							<ml:real>-0.0097330118678139853</ml:real>
+							<ml:real>0.014321378645214669</ml:real>
+							<ml:real>0.0029763124514220547</ml:real>
+							<ml:real>0.035461316593093463</ml:real>
+							<ml:real>0.025571619717436642</ml:real>
+							<ml:real>0.034100152031228556</ml:real>
+							<ml:real>-0.0086363564902001127</ml:real>
+							<ml:real>0.0359201405854588</ml:real>
+							<ml:real>0.0343818883265408</ml:real>
+							<ml:real>0.039521869143582987</ml:real>
+							<ml:real>0.039050089597981383</ml:real>
+							<ml:real>0.031236516073239868</ml:real>
+							<ml:real>0.0254129598256309</ml:real>
+							<ml:real>0.0454755895780855</ml:real>
+							<ml:real>-0.0071775363777393</ml:real>
+							<ml:real>0.083612743445777987</ml:real>
+							<ml:real>0.040162838534307889</ml:real>
+							<ml:real>0.041331643300813424</ml:real>
+							<ml:real>0.026080691782298854</ml:real>
+							<ml:real>0.036090017687207494</ml:real>
+							<ml:real>0.080723578544997</ml:real>
+							<ml:real>-0.05530744995137922</ml:real>
+							<ml:real>0.032966944551154627</ml:real>
+							<ml:real>0.10097603654426701</ml:real>
+							<ml:real>0.0674798884662324</ml:real>
+							<ml:real>-0.014823568184528737</ml:real>
+							<ml:real>0.0076812915573746445</ml:real>
+							<ml:real>0.027369861063183155</ml:real>
+							<ml:real>0.054021255946660816</ml:real>
+							<ml:real>-0.021899940972023552</ml:real>
+							<ml:real>0.041111066568270384</ml:real>
+							<ml:real>0.019673059718818629</ml:real>
+							<ml:real>0.051051487575074585</ml:real>
+							<ml:real>0.041832662230409566</ml:real>
+							<ml:real>0.014035863991124168</ml:real>
+							<ml:real>0.027203107032723588</ml:real>
+							<ml:real>0.00087671302603957977</ml:real>
+							<ml:real>0.11607956963660822</ml:real>
+							<ml:real>0.057624339211819017</ml:real>
+							<ml:real>-0.029905036858143632</ml:real>
+							<ml:real>0.061906772629172414</ml:real>
+							<ml:real>0.027286015073980031</ml:real>
+							<ml:real>0.028402784028948247</ml:real>
+							<ml:real>0.032591792282816556</ml:real>
+							<ml:real>0.071785173688951792</ml:real>
+							<ml:real>0.066576382289486813</ml:real>
+							<ml:real>0.012490601230316759</ml:real>
+							<ml:real>0.067213540343549691</ml:real>
+							<ml:real>0.043054212873005378</ml:real>
+							<ml:real>0.0590123488629379</ml:real>
+							<ml:real>0.051955080208837677</ml:real>
+							<ml:real>-0.014359368349420471</ml:real>
+							<ml:real>0.017635774025752469</ml:real>
+							<ml:real>0.056635688310984526</ml:real>
+							<ml:real>-0.015475341615682639</ml:real>
+							<ml:real>0.025783784951903258</ml:real>
+							<ml:real>0.029754338361314157</ml:real>
+							<ml:real>0.075050172261581158</ml:real>
+							<ml:real>-0.0032901528328135089</ml:real>
+							<ml:real>0.041744854343717927</ml:real>
+							<ml:real>0.011847840096737996</ml:real>
+							<ml:real>0.042209438397076776</ml:real>
+							<ml:real>0.025261808216051545</ml:real>
+							<ml:real>0.00091733252689168206</ml:real>
+							<ml:real>0.052550527705710115</ml:real>
+							<ml:real>-0.0030409466243436103</ml:real>
+							<ml:real>-0.013223157439009385</ml:real>
+							<ml:real>0.012222299666830902</ml:real>
+							<ml:real>0.010178807050285281</ml:real>
+							<ml:real>0.047006342705499408</ml:real>
+							<ml:real>0.049496675467277568</ml:real>
+							<ml:real>0.019671297391341262</ml:real>
+							<ml:real>0.076773663883246759</ml:real>
+							<ml:real>0.0059776313096806992</ml:real>
+							<ml:real>0.018159370110782357</ml:real>
+							<ml:real>0.033493119712758888</ml:real>
+							<ml:real>0.038626377145239081</ml:real>
+							<ml:real>0.08985238931758105</ml:real>
+							<ml:real>0.005637370517921435</ml:real>
+							<ml:real>0.069096329100085022</ml:real>
+							<ml:real>-0.00641638199639402</ml:real>
+							<ml:real>0.012416836265789133</ml:real>
+							<ml:real>0.10364696287837687</ml:real>
+							<ml:real>0.03026293281104717</ml:real>
+							<ml:real>0.052702228308528935</ml:real>
+							<ml:real>0.0351911995270492</ml:real>
+							<ml:real>-0.020693501761932992</ml:real>
+							<ml:real>0.032165896692593524</ml:real>
+							<ml:real>0.0700530514605415</ml:real>
+							<ml:real>0.021426163196135859</ml:real>
+							<ml:real>0.00947654762174639</ml:real>
+							<ml:real>0.0984650555381925</ml:real>
+							<ml:real>0.095974955007026158</ml:real>
+							<ml:real>0.056767169335584906</ml:real>
+							<ml:real>0.085986026108730768</ml:real>
+							<ml:real>-0.022264184031099102</ml:real>
+							<ml:real>0.069335167508595377</ml:real>
+							<ml:real>0.0228856640535595</ml:real>
+							<ml:real>-0.016492734496153655</ml:real>
+							<ml:real>0.053218486906001644</ml:real>
+							<ml:real>0.031181789289397608</ml:real>
+							<ml:real>0.024070755009412081</ml:real>
+							<ml:real>0.019881036177399555</ml:real>
+							<ml:real>-0.037327518109924435</ml:real>
+							<ml:real>-0.011347055048256055</ml:real>
+							<ml:real>-0.015289478714295967</ml:real>
+							<ml:real>0.04123773825599461</ml:real>
+							<ml:real>0.056629134183891927</ml:real>
+							<ml:real>0.080620974565361672</ml:real>
+							<ml:real>0.087193564730256926</ml:real>
+							<ml:real>0.022013364345950855</ml:real>
+							<ml:real>0.0941677139220596</ml:real>
+							<ml:real>0.019954275936177285</ml:real>
+							<ml:real>0.059755590125940693</ml:real>
+							<ml:real>0.0055215651396247215</ml:real>
+							<ml:real>0.010161393801579143</ml:real>
+							<ml:real>0.050438765975886979</ml:real>
+							<ml:real>0.052980564244418382</ml:real>
+							<ml:real>0.085881320137587674</ml:real>
+							<ml:real>0.034572816053859236</ml:real>
+							<ml:real>0.027341398053313253</ml:real>
+							<ml:real>0.0088857592690852038</ml:real>
+							<ml:real>-0.01009748364353902</ml:real>
+							<ml:real>0.026013876351704802</ml:real>
+							<ml:real>0.02938043289524277</ml:real>
+							<ml:real>-0.00096456871029299983</ml:real>
+							<ml:real>0.017158535167738333</ml:real>
+							<ml:real>0.036952136711551987</ml:real>
+							<ml:real>0.0784341038327645</ml:real>
+							<ml:real>-0.013319081278983005</ml:real>
+							<ml:real>0.039710260304860745</ml:real>
+							<ml:real>0.052544209373037581</ml:real>
+							<ml:real>0.078628846472716757</ml:real>
+							<ml:real>0.10304026034477035</ml:real>
+							<ml:real>-0.0052140115655263733</ml:real>
+							<ml:real>-2.1019211708125978E-05</ml:real>
+							<ml:real>0.013185679592411192</ml:real>
+							<ml:real>0.045736299662259637</ml:real>
+							<ml:real>0.066903018529202621</ml:real>
+							<ml:real>0.063999133413275983</ml:real>
+							<ml:real>0.0792402439954866</ml:real>
+							<ml:real>0.05488291916036115</ml:real>
+							<ml:real>0.05690796490275405</ml:real>
+							<ml:real>0.056900787455140413</ml:real>
+							<ml:real>0.013613532010078413</ml:real>
+							<ml:real>0.023333770707998903</ml:real>
+							<ml:real>0.052706627168341867</ml:real>
+							<ml:real>0.02142987715967996</ml:real>
+							<ml:real>0.017893380674687709</ml:real>
+							<ml:real>0.025811363231826923</ml:real>
+							<ml:real>0.055758498904059713</ml:real>
+							<ml:real>0.051141696887989113</ml:real>
+							<ml:real>-0.027729321855357328</ml:real>
+							<ml:real>0.070150906700680457</ml:real>
+							<ml:real>0.072603760953094579</ml:real>
+							<ml:real>0.016788962119016204</ml:real>
+							<ml:real>0.0329725832089337</ml:real>
+							<ml:real>0.040185283275698432</ml:real>
+							<ml:real>0.031186511817682575</ml:real>
+							<ml:real>-0.015032527253483976</ml:real>
+							<ml:real>0.0431659268566425</ml:real>
+							<ml:real>0.0586672096945115</ml:real>
+							<ml:real>-0.00043583083727585364</ml:real>
+							<ml:real>0.0089093938942417777</ml:real>
+							<ml:real>0.021487668592784046</ml:real>
+							<ml:real>0.028686383005492859</ml:real>
+							<ml:real>0.088783271262429131</ml:real>
+							<ml:real>0.055318059658360112</ml:real>
+							<ml:real>0.02418667608667216</ml:real>
+							<ml:real>0.026647361535081997</ml:real>
+							<ml:real>0.081185734080422234</ml:real>
+							<ml:real>0.037651515219755384</ml:real>
+							<ml:real>0.045324912670935961</ml:real>
+							<ml:real>0.017060300888943464</ml:real>
+							<ml:real>0.063567883851208123</ml:real>
+							<ml:real>0.00720432432753888</ml:real>
+							<ml:real>0.017301083073006762</ml:real>
+							<ml:real>0.017165455305513787</ml:real>
+							<ml:real>0.086655105405256547</ml:real>
+							<ml:real>0.05029972889808218</ml:real>
+							<ml:real>0.052937717003382449</ml:real>
+							<ml:real>0.045436202145829649</ml:real>
+							<ml:real>0.10867381327491858</ml:real>
+							<ml:real>0.040567552585252832</ml:real>
+							<ml:real>0.047677464821410373</ml:real>
+							<ml:real>0.0049621430144372791</ml:real>
+							<ml:real>0.0099315655781211237</ml:real>
+							<ml:real>0.062704591063837273</ml:real>
+							<ml:real>0.0056142249204102958</ml:real>
+							<ml:real>0.045487422569366387</ml:real>
+							<ml:real>-0.041510435259847066</ml:real>
+							<ml:real>0.02569853629124004</ml:real>
+							<ml:real>0.0072471446555353539</ml:real>
+							<ml:real>0.0230380144382436</ml:real>
+							<ml:real>0.030182336825900977</ml:real>
+							<ml:real>0.020647652638652744</ml:real>
+							<ml:real>-0.03041009367551821</ml:real>
+							<ml:real>0.035019174385745463</ml:real>
+							<ml:real>0.01289208345532924</ml:real>
+							<ml:real>0.0575908299169599</ml:real>
+							<ml:real>0.029931258837657466</ml:real>
+							<ml:real>0.019663956104165253</ml:real>
+							<ml:real>0.074697815582095567</ml:real>
+							<ml:real>-0.014584446539280843</ml:real>
+							<ml:real>0.0653927757702948</ml:real>
+							<ml:real>-0.018207441421473229</ml:real>
+							<ml:real>0.06160536518748827</ml:real>
+							<ml:real>0.0056246342402559279</ml:real>
+							<ml:real>0.062440899749760373</ml:real>
+							<ml:real>0.017318650581433764</ml:real>
+							<ml:real>0.03614005141786393</ml:real>
+							<ml:real>-0.024041055543547334</ml:real>
+							<ml:real>0.01023670331029415</ml:real>
+							<ml:real>0.030027549674751727</ml:real>
+							<ml:real>0.046700596994657041</ml:real>
+							<ml:real>0.028966120017643423</ml:real>
+							<ml:real>0.046717827242035284</ml:real>
+							<ml:real>0.053274072092461475</ml:real>
+							<ml:real>0.037515075489557258</ml:real>
+							<ml:real>0.049035839542647806</ml:real>
+							<ml:real>0.049772598959109536</ml:real>
+							<ml:real>0.013884660921706177</ml:real>
+							<ml:real>0.075305412637376112</ml:real>
+							<ml:real>0.057140470795813046</ml:real>
+							<ml:real>0.025660467311703447</ml:real>
+							<ml:real>0.012534521925974526</ml:real>
+							<ml:real>0.0686613403833809</ml:real>
+							<ml:real>-0.022305513847684103</ml:real>
+							<ml:real>0.019213765423445477</ml:real>
+							<ml:real>0.009901003929477379</ml:real>
+							<ml:real>0.03961762021044328</ml:real>
+							<ml:real>0.031630045359059195</ml:real>
+							<ml:real>0.036264362501185685</ml:real>
+							<ml:real>0.029262914346854241</ml:real>
+							<ml:real>0.013372549758547146</ml:real>
+							<ml:real>0.054554438848341005</ml:real>
+							<ml:real>0.061251894675924221</ml:real>
+							<ml:real>0.063211457772499022</ml:real>
+							<ml:real>0.056402390520814152</ml:real>
+							<ml:real>0.0082540188229642316</ml:real>
+							<ml:real>0.013208358860837466</ml:real>
+							<ml:real>0.006311662768324581</ml:real>
+							<ml:real>-0.013508119441111001</ml:real>
+							<ml:real>0.043042112053771772</ml:real>
+							<ml:real>0.025974187597646945</ml:real>
+							<ml:real>0.06680643364645511</ml:real>
+							<ml:real>0.051602036456567156</ml:real>
+							<ml:real>0.079889230904428607</ml:real>
+							<ml:real>0.0488500538685297</ml:real>
+							<ml:real>-0.017453233105400617</ml:real>
+							<ml:real>0.01429428415035193</ml:real>
+							<ml:real>0.016663618353624583</ml:real>
+							<ml:real>0.02615885844585214</ml:real>
+							<ml:real>0.037652994777819311</ml:real>
+							<ml:real>-0.0081178131227100676</ml:real>
+							<ml:real>0.028730892055589045</ml:real>
+							<ml:real>0.026621237569863853</ml:real>
+							<ml:real>-0.010776042316065904</ml:real>
+							<ml:real>0.0038417689787396021</ml:real>
+							<ml:real>0.04319119922904166</ml:real>
+							<ml:real>0.082954325468367548</ml:real>
+							<ml:real>0.0715700345082185</ml:real>
+							<ml:real>0.074647387255701442</ml:real>
+							<ml:real>0.03310687558215776</ml:real>
+							<ml:real>0.010435983412383765</ml:real>
+							<ml:real>0.0308352897417926</ml:real>
+							<ml:real>0.0056466211006215095</ml:real>
+							<ml:real>0.05094433700692666</ml:real>
+							<ml:real>0.05917778725223586</ml:real>
+							<ml:real>0.030713816565024536</ml:real>
+							<ml:real>-0.016219390233130047</ml:real>
+							<ml:real>-0.018026118242772796</ml:real>
+							<ml:real>0.0015610608497435314</ml:real>
+							<ml:real>0.073409130029457079</ml:real>
+							<ml:real>0.019608652072653568</ml:real>
+							<ml:real>0.0093300932556657414</ml:real>
+							<ml:real>0.0019805740528062174</ml:real>
+							<ml:real>0.0048929404155236937</ml:real>
+							<ml:real>0.074138278619302986</ml:real>
+							<ml:real>-0.013211288319941405</ml:real>
+							<ml:real>-0.014424168969219007</ml:real>
+							<ml:real>0.047250440493868374</ml:real>
+							<ml:real>0.084723311522201181</ml:real>
+							<ml:real>0.034145674578238513</ml:real>
+							<ml:real>0.028207515236534114</ml:real>
+							<ml:real>0.076198683773925274</ml:real>
+							<ml:real>0.073019345384581255</ml:real>
+							<ml:real>0.022428825394006112</ml:real>
+							<ml:real>-0.0043656306028627065</ml:real>
+							<ml:real>-0.0279301919037988</ml:real>
+							<ml:real>-0.016296040032863373</ml:real>
+							<ml:real>0.018782402788667857</ml:real>
+							<ml:real>-0.00063948737677696488</ml:real>
+							<ml:real>0.025234075345069058</ml:real>
+							<ml:real>0.0470573057114223</ml:real>
+							<ml:real>0.058208003727705272</ml:real>
+							<ml:real>0.0299428753892675</ml:real>
+							<ml:real>0.063322294061477574</ml:real>
+							<ml:real>0.015817984192343024</ml:real>
+							<ml:real>0.00017994837270828747</ml:real>
+							<ml:real>0.0062280957004191518</ml:real>
+							<ml:real>0.017951004454225258</ml:real>
+							<ml:real>-0.036481452996978254</ml:real>
+							<ml:real>-0.015913133537676444</ml:real>
+							<ml:real>0.016510943991746803</ml:real>
+							<ml:real>-0.0049220416484170183</ml:real>
+							<ml:real>0.0052309032135699355</ml:real>
+							<ml:real>0.012608803654937759</ml:real>
+							<ml:real>0.093069835515909735</ml:real>
+							<ml:real>0.0013009549772681518</ml:real>
+							<ml:real>0.043948694282526832</ml:real>
+							<ml:real>0.0498633173913432</ml:real>
+							<ml:real>0.0925954545505516</ml:real>
+							<ml:real>-0.025006117756068532</ml:real>
+							<ml:real>0.013748177443568715</ml:real>
+							<ml:real>0.018145161345179402</ml:real>
+							<ml:real>-0.016382580705236027</ml:real>
+							<ml:real>0.044060521121789743</ml:real>
+							<ml:real>0.035978616355579592</ml:real>
+							<ml:real>0.071416659179842731</ml:real>
+							<ml:real>0.018303529343036962</ml:real>
+							<ml:real>-0.0021037827505381041</ml:real>
+							<ml:real>0.032783545336098827</ml:real>
+							<ml:real>-0.03930309679059104</ml:real>
+							<ml:real>0.055185180388530264</ml:real>
+							<ml:real>0.066156960773558454</ml:real>
+						</ml:matrix>
+					</result>
+				</ml:eval>
+				<resultFormat>
+					<table item-idref="16"/>
+				</resultFormat>
+			</math>
+			<rendering item-idref="17"/>
+		</region>
+	</regions>
+	<binaryContent>
+		<item item-id="1" content-encoding="gzip">H4sIAAAAAAAA/4yQwW7CMAyG7aZbS9etu3AhSOUZeIIdENph2iT2ACiUAkVUTF2ROPLm3W8n
+u+w0R3b+Ot/vRsmJiJGfyEy1QS228/W+c1+H9e7cta5PSGKMHGl74XqnLZog07b62Bzrqvet
+ld8omqGYMF+8hWr5yty1+V7q6FjZKfKNA+tjwCKe/r/7OzzpO1fV84XRIxvAkp+JLQ+imG0E
+U8kRWwNryYZtPEgnBkMDxB2Y2wuO7oURV6IMRCqMwCOZI/YMjNofwKg9B6P2R/0XxJMyEIUw
+AvvrFu+Xtu6ayp38g6R67VfklhosE14uC6/5J3IpPwAAAP//AwARvY6sxgEAAA==</item>
+		<item item-id="2">iVBORw0KGgoAAAANSUhEUgAAAEQAAAARCAYAAABkUAr2AAAAAXNSR0IArs4c6QAAAARnQU1B
+AACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGQSURBVFhH7ZWLkcQgCIaty4Ks40qw
+mjSTYjjAF6DG21tvZzKXfyaTiIrwQRIHj5QeIEYPEKMHiFEP5AjgnKuXj2eeOCH6Zq9XOPI8
+bV3bw4F+QkRvZr334Muz2AtnbHaf9u3WGX09UwHhCRdApAIBA7FQarwZnoyfkmzrc9IikdFY
+rk8xaJ98blSGbSrn9UC4Eh5EbEmcdLEbIHlsAdSx2lvUOoTUA4lw8D5ZmL8DQhp2SN8dRbJL
+NJC0RycsE+T5RZsPgeCd7G3vBZD8SumOek1zIMPgZRekZ24x0WZSMkGdFCnB5b3ZPgNS1tZz
+lx1iYpPXgtYcyCsdQm09ANgBsT7NqzkHgqrV/wmQ32sIpB2ex0UqAQEEZZMhKdvgo4tGBNwg
+XQJBpULhH+jTHULqKyq7g6SBlHl5nk6wBGl9XgEJ/UeYfCySekdTIKRUkUxWJasrYLuAqygr
+JBJIoPs5ZUdbG9s/E0IU/pTe/ajW+FMMHZD/rgrEfWk2dxvvEnsl5/KAu413ir0W53e97xPA
+N+GchLYdqLFKAAAAAElFTkSuQmCC</item>
+		<item item-id="3">iVBORw0KGgoAAAANSUhEUgAAAEUAAAARCAYAAACLkmHIAAAAAXNSR0IArs4c6QAAAARnQU1B
+AACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFESURBVFhH7ZTtDYQgDIaZi4E6D9Ow
+jMP06IdasKBePHM/eBMSxArt01cCTh00oTiaUBxNKI4USkYIAYMzYlok5LJkL8j6+JaWhJFz
+jthNeRCzpIhBk66ckqGBkEHgvF7hXVEjtFAuHMpKq34MAzF1jqGQGMyA/j+Ictwat2CKjlNP
+Yq47hSW/A6/TxjFhVrK0tlLevuMu2I7Q3Pyeh2xVau3e65FsQSSvjrOYm1CEakxpK4xjtIh9
+TnZci29ArFa95Do5T75rRocYFWTz7kEZxdyEYpyyFV80nLdOoRfO80N6HQoHV0X+Gsp9p5TE
+zbsf3ykCxKwNQTwF5RuRm82Z5d47HjGOcaDY/78eO829g5DtXDekeEh7lyMgrHMGZhzgJc3A
+nA5flX5f3Vntnl4Mie86za0EV06ZEk0ojiYURxPKQYgf3AFxSfavxmMAAAAASUVORK5C
+YII=</item>
+		<item item-id="4">iVBORw0KGgoAAAANSUhEUgAAAD0AAAARCAYAAABuDKSkAAAAAXNSR0IArs4c6QAAAARnQU1B
+AACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFGSURBVFhH7ZQLDsMgCIZ7Lg/EeTiN
+l/EwjJeKrdm6NFu22D8xUYvgB9iNFtQNvYpWhs4E20bbZCQsZvIXihzAK1dBSrqXSHCGSmfY
+QWYwB9CO/7QKgkKNkkQYrMEzk30wHaBFCu6Hflq9yofCtaIVwsQ2vlJNod2Z7ouDhJQxNecl
+zKvEj7VY7RIPxmvIwd9e3oaXGst9VP96v+BQ7+Zz1RzaLpwQx0xG59426lrmnBj1Evdbm7E/
+fEXVk3QYpzIisSyuQEemk9ChMnu42byq/g/ivtp956lkuABt7Tv+CJ5DW5KsIj3jqsx22jWv
+qK9WWs573Hff9OG9noAe31CAFhvdl8AfrjaDdg65QygaPz2H9upMRk9szz7kOHdQsbcFJ6Cf
+18FZB7Efvnsyovxbj/mG2nPyOFEtpsEPlV5FN/QqWhCa6AEVNZi4iDV/LAAAAABJRU5ErkJg
+gg==</item>
+		<item item-id="5">iVBORw0KGgoAAAANSUhEUgAAADMAAAARCAYAAABwxZQXAAAAAXNSR0IArs4c6QAAAARnQU1B
+AACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEsSURBVEhL7VSJDcMgDGQuBmIeT8My
+DOPah3nVhrRNpDbKSSiJhfHd2cHxhXCL+VVcUEwi9s6x0xUiQkAf9769T8tTsoQzkJh8qeV5
+KFX55fjQmUQeSb0eHEYtEMNEPoZcaEw6DIlCFaC1nSdhhC8ORRxECQ/EDYmII8gF2VqwEKNA
+zuTaGTDSYKM1q4HWPfsCIEaeowM7xMCljXGzcfi6eXqO8cIUdQeCs70DRcxIbo+Y7MxLMRXm
+oI7lvPYolW6UGiqmr7chRlDdPKAzh0Bq1Gl5V4wgXwiatC2m7Ftr+bwzMfT/sWD9z7SbI8M2
+TbPZi8lCzu2K1mi8iQNqTbeZdK2KQZvg0uywJOGkPEqDm7YWpuZie/Y9QeNVVsfPzi2xoTP/
+jlvMr+JCYpgfbF9L4mryUxcAAAAASUVORK5CYII=</item>
+		<item item-id="6">iVBORw0KGgoAAAANSUhEUgAAADQAAAARCAYAAACSGY9uAAAAAXNSR0IArs4c6QAAAARnQU1B
+AACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADbSURBVEhL7ZWBCcQgDEWdKwM5x43g
+NC7jMKmVNMRUqFrvCHIfpCRY85+x1uFm+gNZ175AKQA655oDQqJZa1Vq+kgRKQWEUhewKtuZ
+F0CeJ0YvIPILvlphjXgDK6CI/jJcjPqcGcs3j1wF9EXdOhSzIY4TBnBYwoH8PBC1mtebkAbS
+8eVjJL+gQ7Qz5Ryr8UDbApJ1pfHevKkjZwRoXYdyYRH/+htaoBuQvrUgZJtjeQWkdptfbOjt
+pXDubquTtO7r/9AuYiD3qdmeYqsqLk+z0nBPbFUMNPO0J8QDgsVpbT0RmR0AAAAASUVORK5C
+YII=</item>
+		<item item-id="7">iVBORw0KGgoAAAANSUhEUgAAADYAAAARCAYAAACW7F9TAAAAAXNSR0IArs4c6QAAAARnQU1B
+AACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAETSURBVEhL7ZWNDYQgDIWZqwMxx43Q
+aViGYXptwQbQO8G/eOZeYgwPof0ooKOH6g/2a3o4WEQC58jJ44NaqtIHpJjtoxUR6rgiiw2E
+ZeBOv6qYBuDOOkYkxCbogZpi1mCB/JS4JuzZGfMbMKQQ2LQBonPBRLOKSQ7W5viQF3vAn4Px
+O3jusK23Apa3gM27QS1Y25Z8gMsx4i+CcReXNg1aBTPlldJ93jwr1EtgKXZSCdDrfwBjWSV6
+wbbrWjCWBuRDCRdXjDMr2mlebW4/Y76+QqePbNA5moHpUShuOTvv/b6Bafl0hfMHJh70DWzv
+5SGrvVTZPO8h/7EnycDcq2Ycbd9Nmp0kWSY62r6jDGzP+34iegNgatnNchFRMQAAAABJRU5E
+rkJggg==</item>
+		<item item-id="8">iVBORw0KGgoAAAANSUhEUgAAADUAAAARCAYAAAB92+RQAAAAAXNSR0IArs4c6QAAAARnQU1B
+AACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADsSURBVEhL7ZSLDcQgCIaZy4GYx2lc
+xmE45FA5a7yHaXs1/ZOmahX4AAu0oG6oq2hxqOjJgSMfdf61AiEAYdDpwYreEahzhXoGBFNQ
+50mAUvyvUKzpSp2rTqVYGSqkd6oakMuEAQmcp6AZSes5O2WPTUoZ5w6oWexK9s+17gCKnXPw
+EmZxVAMTAF2vY+Tmte1rQOQbKyXloy6I5F0+2zxviMeVMo4DtsGzhuO2UulDZ76D/hhq70pt
+Aj4C6nf1oTZZ0mDNOgY7VkOSRV/POiQsdpINYzff11YCPfGjkDurPtiIgVpHN9RVtCAU0QPq
+CsOFUuTg2wAAAABJRU5ErkJggg==</item>
+		<item item-id="9">iVBORw0KGgoAAAANSUhEUgAAADwAAAARCAYAAACBzs+aAAAAAXNSR0IArs4c6QAAAARnQU1B
+AACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEsSURBVFhH7ZONDcQgCIWdy4GYx2lc
+psNwQh+Kts21yfWS/rykCVAVPsTAD9MLfHc9GHhKHEPkNMG/oKYUOVCGBylX4AA2AGcmF7yi
+FFYYOmDhApOC081vOBfA6k+cYmkIvAacbQQCR6OXjTFxRhclbh2ta4oyzftap5Gk+JTnKfLr
+O2H0xok8ohF49LU+2DWhgGlJtQAbdxSLeLOpDA7Wd3sRr2NV4NMemtakxfelG2vAiwuBjSL7
+kZYFq2BrtkmmQQt08ZWzz9CfgTEJmlBsByzPpNyaT76t392wNr/6W2/YatoD6ew+mQOWNRqX
+hOfe8gJY60BOqaM8uQa86CwKdnHK3kYC67zC2158kZhkffffzh2E/129R1SfEvKZat4Z3AE/
+Qy/w3fUwYOYPJ3lxs6+MPZwAAAAASUVORK5CYII=</item>
+		<item item-id="10">iVBORw0KGgoAAAANSUhEUgAAADEAAAARCAYAAAB0MEQqAAAAAXNSR0IArs4c6QAAAARnQU1B
+AACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEgSURBVEhL7ZSLDcMgDESZi4GYx9Ow
+DMO49mF+VpWk6Udt1JNQAylw7wwJfAH9Ib5FF4IoxDEEDtpSxhA0j0fign5kKvb+rSpM0fb2
+e3ZfdXypRKGISTMHFiMdyJzuLfgmFUp9n5wsxNoTH+YBMMlDEOcsg/JicDQIffxkJSaZWbhQ
+fz1lq5b1IEDI70p+ByK3cgaOW0RW9rWyJ6TrmB+clmlBeLVnqEHUkjWDHmICPGzSEtO5vh0h
+lPRbWAoxB7cBIeoGt4+TLrJZjaclgfZT8SiEqF50nfQsxPlK5DTfT9H+nRhfhCr7U5vkIdB3
+m7xQGuLwS5ywsfs6SZU6BMqCdNakMcmT9yR3AAB57mIPP6358MbYUolf1R/iW3QBCOYbkbje
+kGfSPbIAAAAASUVORK5CYII=</item>
+		<item item-id="11">iVBORw0KGgoAAAANSUhEUgAAAC8AAAARCAYAAABNV/VxAAAAAXNSR0IArs4c6QAAAARnQU1B
+AACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADgSURBVEhL7ZSLCcQgDEAzVwZyHqdx
+GYfJGS9Kav2cR+9E8IFgbTDPmBZoY478Ko78FN4SAhAAkvWyVtKJ8RYJjIvzP8s7MkkoCpqw
+UtKOieJ8qCXyzuTEQYUsAuXHxCCmWXln+Kpk3HYV5Epbr3voxAznw6IvRjF1eZZCG84q8+qV
+at5VyYfVo3EyTqxFWvK9mLp8gq8tSozk5/mhPH8oqWo8f77ysTD53YM9rxc/k/+G4k+S2vRC
+P6ZeefkQLxWsbS5xuhpT5DzqH17uWYthckuHEYLvPb8RR34VG8sTvQD7JHVIqtmRDgAAAABJ
+RU5ErkJggg==</item>
+		<item item-id="12">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</item>
+		<item item-id="13">iVBORw0KGgoAAAANSUhEUgAAADYAAAARCAYAAACW7F9TAAAAAXNSR0IArs4c6QAAAARnQU1B
+AACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACpSURBVEhL7ZQBDoUgCEA5FwfiPJzG
+y3AYorSGrp9/Obcy3+aWFuKDJuigTLG38V0xYVSgkGZ9uJtjiwM4H+mbSCD1+x+BHcVacgiT
+ssTnQKC4T4S9mCgjZGIrT+6YJxMzkliUOtroklSTWnXQYlrO1VFsJSidHPD/pEVx/KjEP1zs
+PrNjF3yxY/FlVmG7/qtVb708fuXw+17mKP4UZFspxEZiir2NQcVUF2rmbHH9tXRDAAAAAElF
+TkSuQmCC</item>
+		<item item-id="14" content-encoding="gzip">H4sIAAAAAAAA/4xUW2sTURCes/ekm26iSW26STZGjRdE4lFQ30opIniD+APKmqxtxJiYrtLH
+UBD8Az77Iv4C8V18E/+SxO/MpLHgi2eZncv5ZuY7Z4cNiUhBnkGKbNt4B9mbfrY/mrx2yazb
+kMJwMpCYw7F7BjYePH3+MhvkHKE+51t4e4cH053JkYQfQXwE+ivgY8gVdP0AfR393qu/vllf
+IGXDiiyb2Tn5LMti3tOQ0pRNR9e/E81tV3+C3nY80a4v2gtE+wVtRUTvAvBSbo9u0E08d3Be
+/fEh0XFAawz4WjwF6EGwQi4x90uagNgJEVpn8zhkCpF2fmPfK3OFIcRSOF1FF38gHJ2RcIXI
+tnJT8ax0qhic0lyiKi3cmrCtboiunRPWGwztEW2y/23lU10Sa1vCrY5QLNzqXLghTpWdpoCd
+llRvJqJbbe39RHJynqvnba4Ooh3t/gK+fUHiHZxAWeZa6KIcocPIW+aTXxJmyUkudaVZ67Iw
+65rPLWS6TOYqJ3xurq6FrvHYREO9tz9Lpwd7LyazcZr7jK6Z6ePwbpqnMiFby0mxQJgn1kzJ
+Xcgm28Yrpkejw/tcRya2YWZRLbGyFnhINf4/elLcz2fpINO7Nm/FS2CiyqRitTCWUjGOtEiU
+pWIbqYmyVewsTMQBhhYwXGDm29jyDMZk+YyBERiMARdMHZNeBIbT14Dh9BAYTi9xLxjrjIER
+GYwBC93oydtxNhsN0ldyIQHTfgAZ0giPaR6R/AFs+meFp50/AAAA//8DAM1pPMYyBAAA</item>
+		<item item-id="15">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</item>
+		<item item-id="16" content-encoding="gzip">H4sIAAAAAAAA/+xXTWgTURCeTZo0bRPb9Cdqa+K2xlitP7jowRIkmvYgWgOpFDyotMnSRtKm
+TVdob0EQPFQQRPGoHrx48uZRRQRBaD2KF716KogXoY3fvNmmmyJa/xBpJ8z7mTffzL7Zydt5
+fiLSwIPgejV2oa2xiqbZQUwG2DeeSY1cNjOWklAaHAco4Ta8X4hKNcaj55h5jBC6kteYe4au
+1ggklLbPntcZrkairI/IpQ3AmWj7GgRc7zcIy4kGIAJitmGLobwECCv8VHXJocH+qVOWOa4p
+y36w1ymAJjUpVZ85lTZHc4UJj1o4wuhsISOyGiU7Vtmtd3ps8mRhRjZ3BlwLQbqy3QG2B74A
+JxfB14Dh2CyKU3ogHUy5giqWzRVPJyyrmBu5Ypmi2ku8FSc193ZVzVtWotYqUWtpk6i12lEL
+GXdeQNy6VaIVguY2NSyFquxsVxvzI2DJwvhIgUMkC028PYhXJfxAcbz6GMn2usExcLnM2lBN
+5c1kPmdOWAqjSb7IhlQL7MJ88P39x+0faA0dJzctl+vI65CtouVxXPZ8ucwehcqb9F/REnjZ
+wZu0sShNBfws0qmfJtAXaXbtUfBdCpGn8p/ns+AqHdW6gu+Ct0oUGHrpaXfqTt6On+5cequ5
+MX5qHyRJeGe/pmqnf8o3UzNOV+d+1ou7rv1YZ730K/7/JP2Ofw4Dn+P8Tvjryl9dPvM3z4KN
+QR6UXncjRJmI5EN9VWZUxpweXKOdB7fJatgeZimnsqfRRrttTM6B53rvCfhTuTpDb4qT19wM
+oJLVwWM4C/L46dSHdhS9oZQ+Ti2qfgZp2oJed9hhn5//ou04D87NvTqcWQg+vEH3ovOeNyvV
+kG9NrL4VP9L4P6YqVjBKQsLHtor/FamnbJdClF+wS5NCeNAs5obzl/py05P54dmzhawp+ikF
+6hCAnSw7qu8HYft+EJH7QXinVLycYLrcDyKdcj/QOWu6xJaunCdSpO0SQVjZjtpGdouRKEQx
+MRLdI0ZibKRbMLGKkb0OI/tWsT02dr9gexh7QFR7KtiDjsVDjkWefwUAAP//AwBR01Jddg0A
+AA==</item>
+		<item item-id="17">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</item>
+	</binaryContent>
+</worksheet>
