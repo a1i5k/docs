@@ -6,16 +6,17 @@
 <style>
     /* Add some padding on document's body to prevent the content
     to go underneath the header and footer */
-    body{
-        padding-top: 60px;
-        padding-bottom: 40px;
+    body{        
+        color: white;
+        padding-top: 0px;
+        padding-bottom: 200px;
     }
     .fixed-header, .fixed-footer{
         width: 100%;
-        position: fixed;
+        position: fixed;        
         background: #333;
-        padding: 10px 0;
-        color: #fff;
+        padding: 0px 0;
+        color: white;
     }
     .fixed-header{
         top: 0;
@@ -28,38 +29,60 @@
         margin: 0 auto; /* Center the DIV horizontally */
     }
     nav a{
-        color: #fff;
+        color: white;
         text-decoration: none;
-        padding: 7px 25px;
+        padding: 0px 0px;
         display: inline-block;
     }
+    body {
+        background: radial-gradient(pink, blue);
+    }
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  background-color: white; /* Зеленый цвет фона */
+  color: black; /* Белый цвет текста */
+  border: none; /* Без границы */
+  border-radius: 4px; /* Закругленные углы */
+  cursor: pointer; /* Изменение курсора при наведении */
+}
+
 </style>
 </head>
 <body>
-    <div class="fixed-header">
-        <div class="container">
-
-        </div>
-    </div>
     <div class="container">
         <form action="predictImage" method="post" enctype="multipart/form-data">
             {% csrf_token %}
 
-            <div class="col-md-4 col-sm-4">
-                <label for="FilePath">Загрузить изображение:</label>
-            </div> <input name="filePath" type="file"><br><br>
-            <input type="submit" value="Submit" >
-        </form>
-    </div>
-    <div>
-        <br>
-        {% if scorePrediction %}
-        <h3>The classification is : {{scorePrediction}}</h3>
-        {% endif %}
+  <div class="row">
+            <div class="col"><p>Ваше изображение:</p>
+                <input id="files" style="visibility:hidden;" type="file" name="filePath">
+                <label for="files" class="btn">Выбрать иpображение</label>
+            </div>
+  </div>
+<div class="row">
+    <div class="col">
+                {% if scorePrediction %}
+                    <img src={{ image }} width="256" height="250">
+                {% endif %}
+                <input type="submit" value="Отправить" class="btn">
 
     </div>
-    <div class="fixed-footer">
-        <div class="container"></div>
+ </div>
+        </form>
+        <br>
+        {% if scorePrediction %}
+            <h3>Классификация : {{scorePrediction}}</h3>
+            <h3>Описание:</h3>
+            <div> {{description}} </div>
+            <h3>Признаки:</h3>
+            {% for fitch in fitches %}
+                <div> {{fitch}} </div>
+            {%endfor%}
+        {% endif %}
+       
     </div>
 </body>
 </html>
