@@ -55,34 +55,28 @@
     <div class="container">
         <form action="predictImage" method="post" enctype="multipart/form-data">
             {% csrf_token %}
-
-  <div class="row">
-            <div class="col"><p>Ваше изображение:</p>
-                <input id="files" style="visibility:hidden;" type="file" name="filePath">
-                <label for="files" class="btn">Выбрать иpображение</label>
-            </div>
-  </div>
-<div class="row">
-    <div class="col">
-                {% if scorePrediction %}
-                    <img src={{ image }} width="256" height="250">
-                {% endif %}
-                <input type="submit" value="Отправить" class="btn">
-
+    <div class="row">
+        <div class="col">
+            <input id="files" style="visibility:hidden;" type="file" name="filePath">
+            <label for="files" class="btn">Выбрать изображение</label>
+            <input type="submit" value="Отправить" class="btn">
+        </div>
+</form>
     </div>
- </div>
-        </form>
-        <br>
-        {% if scorePrediction %}
-            <h3>Классификация : {{scorePrediction}}</h3>
-            <h3>Описание:</h3>
-            <div> {{description}} </div>
-            <h3>Признаки:</h3>
-            {% for fitch in fitches %}
-                <div> {{fitch}} </div>
-            {%endfor%}
-        {% endif %}
-       
+   {% if scorePrediction %}
+        <p>Ваше изображение:</p>
+        <img src={{ image }} width="256" height="250">
+   {% endif %}
+   <br>
+   {% if scorePrediction %}
+        <h3>Классификация : {{scorePrediction}}</h3>
+        <h3>Описание:</h3>
+        <div> {{description}} </div>
+        <h3>Признаки:</h3>
+        {% for fitch in fitches %}
+            <div> {{fitch}} </div>
+        {%endfor%}
+    {% endif %}   
     </div>
 </body>
 </html>
