@@ -1,0 +1,298 @@
+'#Reference {C9E29022-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29010-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29020-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29005-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29006-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29008-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2900F-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29012-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29015-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29016-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29021-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29018-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29019-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2901A-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2901B-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2901C-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2901D-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29014-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29013-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29011-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2900D-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2900C-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2900A-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29009-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29004-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29007-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2900E-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2900B-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29001-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29003-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29002-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+Option Base 1
+Option Explicit
+'#Uses "*STB.SVX"
+'#Uses "*GRAPHICS.SVX"
+Sub Main
+  Dim Bs As Boolean
+  Dim Itr,Imax, _
+      n,NCas,Nk,Nm As Integer
+  Dim Vr1,Vr2,Vr3, _
+      Vr4,Vr5,Vr6  As Integer
+  Dim Nc  As Integer
+  Dim Ksm As Integer
+  Dim Lag As Integer
+  Dim Eps,Ses, _
+      StD,StDe As Double
+  Dim Pi2 As Double
+  Dim Lbd As Double
+'
+  Dim Y()  As Double
+  Dim Ys() As Double
+  Dim YY() As Double
+'
+  Dim a()  As Double
+  Dim b()  As Double
+  Dim c()  As Double
+'
+' Object Spreadsheet
+  Dim TS   As Spreadsheet
+  Set TS = ActiveSpreadsheet
+'
+  NCas = TS.NumberOfCases ' volume of sample
+  ReDim Y(NCas)  As Double
+  ReDim Ys(NCas) As Double
+  ReDim YY(NCas) As Double
+'
+' Initialization
+  Itr  = 1
+  Imax = 8 ' max number of iterations
+  Vr1  = 1
+  Vr2  = Vr1+1
+  Vr3  = Vr2+1
+  Vr5  = 43
+  Vr6  = Vr5+1
+  Eps  = 0.0001
+  StDe = 20000.0*Eps
+  For n=1 To NCas
+    Y(n) = TS.Cells(n,Vr1)
+  Next n
+'
+' Smoothing parameter of HP filter
+'   Lbd   ! Lag ! Ksm !
+' --------------------!
+'       5 !   4 !   9 !
+'      10 !   5 !  11 !
+'     120 !  10 !  21 !
+'    1800 !  20 !  41 !
+'   16000 !  35 !  71 !
+'  180000 !  64 ! 129 !
+' 1900000 ! 117 ! 235 !
+' --------------------!
+' Временной интервал запаздывания
+  Lbd = 120 ' smoothing parameter
+  Pi2 = 1.5707963268
+  Lag = Pi2/ArcSin(0.5/(Lbd^0.25))
+'
+' Элементы пятидиагональной симметричной матрицы
+  Ksm = 1+2*Lag
+  ReDim a(Ksm)
+  ReDim b(Ksm)
+  ReDim c(Ksm)
+' Creates pentadiagonal Matrix
+  Call Matrix (Ksm,Lbd,a,b,c)
+'
+  Bs = False ' bias
+  Nk = NCas-Ksm
+  For n=0 To Nk
+    Nc = n
+    Call HPF (Bs,Nc,Lag,a,b,c,Y,Ys)
+  Next n
+  Erase a
+  Erase b
+  Erase c
+'
+' Output of current estimation
+  If (Bs) Then
+    Nm = Ksm
+  Else
+    Nm = 1
+  End If
+  For n=Nm To NCas
+    TS.Cells(n,Vr2) = Ys(n)
+    Ses = Y(n)-Ys(n)
+    TS.Cells(n,Vr3) = Ses
+    Y(n) = Ses
+  Next n
+'
+' Временной интервал запаздывания
+  Lbd = 1900000 ' smoothing parameter
+  Lag = Pi2/ArcSin(0.5/(Lbd^0.25))
+'
+' Элементы пятидиагональной симметричной матрицы
+  Ksm = 1+2*Lag
+  ReDim a(Ksm)
+  ReDim b(Ksm)
+  ReDim c(Ksm)
+' Creates pentadiagonal Matrix
+  Call Matrix (Ksm,Lbd,a,b,c)
+  Nk = NCas-Ksm
+  If (Bs) Then
+    Nm = Ksm
+  Else
+    Nm = 1
+  End If
+'
+' Estimation cicle
+L1: Itr = Itr+1
+'
+    For n=0 To Nk
+      Nc = n
+      Call HPF (Bs,Nc,Lag,a,b,c,Y,Ys)
+    Next n
+    Vr4 = Vr3+1
+    If (Vr4 < Vr5) Then
+      For n=Nm To NCas
+        TS.Cells(n,Vr4) = Ys(n)
+      Next n
+    End If
+'
+' Continue estimation rules
+    StD = 0.0
+    For n=Nm To NCas
+      StD = StD+Ys(n)*Ys(n)
+    Next n
+    StD = Sqr(StD/NCas)
+    TS.Cells(Itr-1,Vr5) = StD
+' Refresh Arrays
+    If (StD>Eps And StDe>StD And Itr<Imax) Then
+'    If (Itr<Imax) Then
+      Vr3 = Vr4+1
+      For n=Nm To NCas
+        Ses = Y(n)-Ys(n)
+        If (Vr3 < Vr5-1) Then
+          TS.Cells(n,Vr3) = Ses
+        End If
+        YY(n) = Y(n)
+        Y(n)  = Ses
+      Next n
+      StDe = StD
+      GoTo L1
+    Else
+      For n=Nm To NCas
+        TS.Cells(n,Vr6)   = TS.Cells(n,1)-YY(n) ' Resulted trend
+        TS.Cells(n,Vr6+1) = YY(n)               ' Resulted seasonal
+      Next n
+    End If
+'
+End Sub
+Sub Matrix (Ks As Integer, Lbd As Double, _
+            ByRef a() As Double, _
+            ByRef b() As Double, _
+            ByRef c() As Double)
+'
+  Dim i As Integer
+'
+' Creates pentadiagonal Matrix
+  c(1) = 1.0+Lbd
+'
+  c(2) = 1.0+5.0*Lbd
+  b(2) = 2.0*Lbd
+  For i=3 To Ks-2
+    a(i) = Lbd
+    b(i) = 4.0*Lbd
+    c(i) = 1.0+6.0*Lbd
+  Next i
+'
+  a(Ks-1) = Lbd
+  b(Ks-1) = 4.0*Lbd
+  c(Ks-1) = 1.0+5.0*Lbd
+'
+  a(Ks) = Lbd
+  b(Ks) = 2.0*Lbd
+  c(Ks) = 1.0+Lbd
+'
+End Sub
+Sub HPF (Bs As Boolean, _
+         Nc As Integer, Lg As Integer, _
+         ByRef a() As Double, _
+         ByRef b() As Double, _
+         ByRef c() As Double, _
+         ByRef Y() As Double, ByRef Ys() As Double)
+'
+  Dim i,k,kMin As Integer
+  Dim Ks As Integer
+'
+  Dim af() As Double
+  Dim bf() As Double
+  Dim cf() As Double
+'
+' Filter coefficient
+  Ks = 1+2*Lg
+  ReDim af(Ks)
+  ReDim bf(Ks)
+  ReDim cf(Ks)
+'
+  Call Vertors (Nc,Ks,Y,a,b,c,af,bf,cf)
+'
+' 5-ти точечная прогонка
+' Backward
+  If (Nc = 0) Then
+    kMin = 1
+  Else
+    kMin = 1+Lg
+  End If
+  k = Nc+Ks
+  Ys(k) = cf(Ks)
+  If ((Not Bs) Or (Nc = 0)) Then
+'  If (Not Bs) Then
+    Ys(k-1) = af(Ks-1)*Ys(k)+cf(Ks-1)
+    For i=Ks-2 To kMin Step -1
+      k = Nc+i
+      Ys(k) = af(i)*Ys(k+1)+bf(i)*Ys(k+2)+cf(i)
+    Next i
+  End If
+'
+End Sub
+Sub Vertors (Nc As Integer, Ks As Integer, _
+             ByRef Y() As Double, _
+             ByRef a() As Double, _
+             ByRef b() As Double, _
+             ByRef c() As Double, _
+             ByRef af() As Double, _
+             ByRef bf() As Double, _
+             ByRef cf() As Double)
+'
+  Dim i  As Integer
+  Dim df As Double
+'
+' 5-ти точечная прогонка
+' Forward
+  af(1) = b(2)/c(1)
+  bf(1) = -a(3)/c(1)
+  cf(1) = Y(Nc+1)/c(1)
+  df    = c(2)-b(2)*af(1)
+'
+  af(2) = (b(3)+bf(1)*b(2))/df
+  bf(2) = -a(4)/df
+  cf(2) = (Y(Nc+2)+b(2)*cf(1))/df
+'
+  For i=3 To Ks
+    df = c(i)+bf(i-2)*a(i)+af(i-1)*(a(i)*af(i-2)-b(i))
+    If (i < Ks) Then
+      af(i) = (b(i+1)-bf(i-1)*(a(i)*af(i-2)-b(i)))/df
+    End If
+    If (i < Ks-1) Then
+      bf(i) = -a(i+1)/df
+    End If
+    cf(i) = (Y(Nc+i)-cf(i-1)*(a(i)*af(i-2)-b(i))-cf(i-2)*a(i))/df
+  Next i
+'
+End Sub
+
+'STATISTICA MACRO FILE VERSION 4
+'BEGINPROPERTIES
+'NAME=Trd_HP
+'DESCRIPTION=
+'LANGUAGE=0
+'ENDPROPERTIES

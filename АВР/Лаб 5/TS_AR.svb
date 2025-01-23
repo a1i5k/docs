@@ -1,0 +1,77 @@
+'#Reference {C9E29022-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29010-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29020-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29005-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29006-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29008-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2900F-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29012-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29015-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29016-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29021-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29018-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29019-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2901A-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2901B-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2901C-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2901D-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29014-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29013-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29011-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2900D-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2900C-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2900A-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29009-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29004-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29007-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2900E-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2900B-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29001-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29003-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29002-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+Option Explicit
+Sub Main
+  Dim TS As Spreadsheet
+  Dim n  As Integer
+
+  Set TS = ActiveSpreadsheet
+
+  TS.Cells(1,2) = 0
+
+  TS.Cells(1,3) = 0
+
+  TS.Cells(1,4) = 0
+  TS.Cells(2,4) = 0
+
+  TS.Cells(1,5) = 0
+  TS.Cells(2,5) = 0
+
+  TS.Cells(1,6) = 0
+  TS.Cells(2,6) = 0
+
+  TS.Cells(1,7) = 0
+  TS.Cells(2,7) = 0
+
+  For n = 1 To TS.NumberOfCases
+     TS.Cells(n,1) = RndNormal(1)
+  Next n
+
+  For n = 2 To TS.NumberOfCases
+     TS.Cells(n,2) = TS.Cells(n,1) - 0.75 * TS.Cells(n-1,2)
+     TS.Cells(n,3) = TS.Cells(n,1) + 0.75 * TS.Cells(n-1,3)
+  Next n
+
+  For n = 3 To TS.NumberOfCases
+     TS.Cells(n,4) = TS.Cells(n,1) + 0.5 * TS.Cells(n-1,4) + 0.3 * TS.Cells(n-2,4)
+     TS.Cells(n,5) = TS.Cells(n,1) - 0.5 * TS.Cells(n-1,5) + 0.3 * TS.Cells(n-2,5)
+     TS.Cells(n,6) = TS.Cells(n,1) + 1.3 * TS.Cells(n-1,6) - 0.4 * TS.Cells(n-2,6)
+     TS.Cells(n,7) = TS.Cells(n,1) - 1.3 * TS.Cells(n-1,7) - 0.4 * TS.Cells(n-2,7)
+  Next n
+End Sub
+
+'STATISTICA MACRO FILE VERSION 4
+'BEGINPROPERTIES
+'NAME=TS_AR
+'DESCRIPTION=
+'LANGUAGE=0
+'ENDPROPERTIES

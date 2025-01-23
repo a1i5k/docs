@@ -1,0 +1,147 @@
+'#Reference {C9E29022-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29010-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29020-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29005-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29006-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29008-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2900F-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29012-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29015-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29016-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29021-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29018-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29019-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2901A-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2901B-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2901C-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2901D-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29014-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29013-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29011-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2900D-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2900C-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2900A-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29009-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29004-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29007-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2900E-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2900B-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29001-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29003-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29002-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+Option Base 1
+Option Explicit
+'#Uses "*STB.SVX"
+'#Uses "*GRAPHICS.SVX"
+Sub Main
+  Dim Itr,Imax, _
+      Lag,n,nl, _
+      NC,NCas,Nsp As Integer
+  Dim Vr1,Vr2,Vr3, _
+      Vr4,Vr5,Vr6 As Integer
+  Dim Bias,Del, _
+      Ses,StD,Stf As Double
+'
+  Dim X()   As Double
+  Dim Y()   As Double
+  Dim Xs()  As Double
+  Dim Ys()  As Double
+  Dim Rw()  As Double
+  Dim Res() As Double
+  Dim YY()  As Double
+  Dim Z()   As Double
+'
+' Object Spreadsheet
+  Dim TS   As Spreadsheet
+  Set TS = ActiveSpreadsheet
+'
+' Smoothing parametr of Lowess
+  Stf = 0.5 ' 0.2 <= Stf <= 0.8
+  Nsp = 2
+  Del = 0.0
+'
+  Lag  = 12  ' autocorrelation lag
+  NC   = TS.NumberOfCases ' volume of sample
+  NCas = NC-Lag
+  ReDim X(NCas)   As Double
+  ReDim Y(NCas)   As Double
+  ReDim Xs(NCas)  As Double
+  ReDim Ys(NCas)  As Double
+  ReDim Rw(NCas)  As Double
+  ReDim Res(NCas) As Double
+  ReDim YY(NCas)  As Double
+  ReDim Z(NCas)   As Double
+'
+' Initialization
+  Itr  = 1
+  Imax = 21 ' max number of iterations
+  Vr1  = 1
+  Vr2  = Vr1+1
+  Vr3  = Vr2+1
+  Vr5  = 43
+  Vr6  = Vr5+1
+  For n = 1 To NCas
+    X(n)  = n
+    Ses   = TS.Cells(n,Vr1)
+    Y(n)  = Ses*TS.Cells(n+Lag,Vr1)
+    YY(n) = Y(n)
+  Next n
+'
+  LOWESS (X,Y,Stf,Nsp,Del,Xs,Ys,Rw,Res)
+'
+' Output of current estimation
+  Bias = NCas/NC
+  For n = 1 To NCas
+    nl = n+Lag
+    TS.Cells(nl,Vr2) = Ys(n)*Bias
+    Ses = Y(n)-Ys(n)
+    TS.Cells(nl,Vr3) = Ses
+    Y(n) = Ses
+  Next n
+'
+' Estimation cicle
+L1: Itr = Itr+1
+'
+    LOWESS (X,Y,Stf,Nsp,Del,Xs,Ys,Rw,Res)
+    Vr4 = Vr3+1
+    If (Vr4 < Vr5) Then
+      For n = 1 To NCas
+        TS.Cells(n+Lag,Vr4) = Ys(n)
+      Next n
+    End If
+'
+' Continue estimation rules
+    StD = 0.0
+    For n = 1 To NCas
+      StD  = StD+Ys(n)*Ys(n)
+      Z(n) = Y(n)
+    Next n
+    StD = Sqr(StD/NCas)
+    TS.Cells(Itr-1,Vr5) = StD
+' Refresh Arrays
+    If (Itr < Imax) Then
+      Vr3 = Vr4+1
+      For n = 1 To NCas
+        Ses = Y(n)-Ys(n)
+        If (Vr3 < Vr5-1) Then
+          TS.Cells(n+Lag,Vr3) = Ses
+        End If
+        Y(n) = Ses
+      Next n
+      GoTo L1
+    Else
+      For n = 1 To NCas
+        nl = n+Lag
+        TS.Cells(nl,Vr6) = (YY(n)-Z(n))*Bias ' Resulted ACF
+        TS.Cells(nl,Vr6+1) = Ys(n)           ' Resulted Error
+      Next n
+    End If
+'
+End Sub
+
+'STATISTICA MACRO FILE VERSION 4
+'BEGINPROPERTIES
+'NAME=Acf_Lws
+'DESCRIPTION=
+'LANGUAGE=0
+'ENDPROPERTIES

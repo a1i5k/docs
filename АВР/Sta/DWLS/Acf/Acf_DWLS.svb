@@ -1,0 +1,262 @@
+'#Reference {C9E29022-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29010-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29020-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29005-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29006-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29008-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2900F-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29012-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29015-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29016-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29021-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29018-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29019-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2901A-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2901B-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2901C-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2901D-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29014-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29013-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29011-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2900D-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2900C-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2900A-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29009-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29004-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29007-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2900E-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2900B-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29001-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29003-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29002-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+Option Base 1
+Option Explicit
+'#Uses "*STB.SVX"
+'#Uses "*GRAPHICS.SVX"
+Sub Main
+  Dim Itr,Imax, _
+      Lag,n,nl, _
+      Nc,NCas     As Integer
+  Dim Vr1,Vr2,Vr3, _
+      Vr4,Vr5,Vr6 As Integer
+  Dim Ksm         As Integer
+  Dim Bias,Rmax,Ro, _
+      Pen,Ses,StD As Double
+'
+  Dim Prm(1 To 3) As Double
+'
+  Dim X()  As Double
+  Dim Y()  As Double
+  Dim Xs() As Double
+  Dim Ys() As Double
+  Dim YY() As Double
+  Dim Z()  As Double
+'
+' Object Spreadsheet
+  Dim TS   As Spreadsheet
+  Set TS = ActiveSpreadsheet
+'
+' Penalty of ACF estimation
+  Prm(1) = 0.0
+'
+' Smoothing parametr of
+' Distance-Weighted Least Squares Fitting
+  Ksm = 144 ' smoothing period
+  Prm(2) = 0.5 ' 0.2 <= Prm(2) <= 0.8
+'
+  Lag  = 12 ' autocorrelation lag
+  Nc   = TS.NumberOfCases ' volume of sample
+  NCas = Nc-Lag
+  ReDim X(NCas)  As Double
+  ReDim Y(NCas)  As Double
+  ReDim Xs(NCas) As Double
+  ReDim Ys(NCas) As Double
+  ReDim YY(NCas) As Double
+  ReDim Z(NCas)  As Double
+'
+' Initialization
+  Itr  = 1
+  Imax = 51 ' max number of iterations
+  Vr1  = 1
+  Vr2  = Vr1+1
+  Vr3  = Vr2+1
+  Vr5  = 43
+  Vr6  = Vr5+1
+  Ro   = 0.0
+  For n = 1 To NCas
+    X(n)  = n
+    Xs(n) = n
+    Ses   = TS.Cells(n,Vr1)
+    Y(n)  = Ses*TS.Cells(n+Lag,Vr1)
+    YY(n) = Y(n)
+    Ro    = Ro+Y(n)
+  Next n
+  Ro = Ro/Nc ' biased initial ACF estimation
+  For n = 1 To NCas
+    Ys(n) = Ro
+  Next n
+  TS.Cells(1,Vr2) = Ro
+'
+' Threshold of ACF
+  StD    = 0.08 ' std. error of ACF estimation
+  Prm(3) = 0.8+StD
+  Call DWLSR (NCas,Ksm,Prm,X,Y,Xs,Ys)
+'
+' Output of current estimation
+  Bias = NCas/Nc
+  For n = 1 To NCas
+    nl = n+Lag
+    TS.Cells(nl,Vr2) = Ys(n)*Bias
+    Ses = Y(n)-Ys(n)
+    TS.Cells(nl,Vr3) = Ses
+    Y(n) = Ses
+  Next n
+  Prm(3) = StD
+'
+' Estimation cicle
+L1: Itr = Itr+1
+'
+    Call DWLSR (NCas,Ksm,Prm,X,Y,Xs,Ys)
+    Vr4 = Vr3+1
+    If (Vr4 < Vr5) Then
+      For n = 1 To NCas
+        TS.Cells(n+Lag,Vr4) = Ys(n)
+      Next n
+    End If
+'
+' Continue estimation rules
+    StD = 0.0
+    For n = 1 To NCas
+      StD  = StD+Ys(n)*Ys(n)
+      Z(n) = Y(n)
+    Next n
+    StD = Sqr(StD/NCas)
+    TS.Cells(Itr-1,Vr5) = StD
+' Refresh Arrays
+    If (Itr < Imax) Then
+      Vr3 = Vr4+1
+      For n = 1 To NCas
+        Ses = Y(n)-Ys(n)
+        If (Vr3 < Vr5-1) Then
+          TS.Cells(n+Lag,Vr3) = Ses
+        End If
+        Y(n) = Ses
+      Next n
+      GoTo L1
+    Else
+      For n = 1 To NCas
+        nl = n+Lag
+        TS.Cells(nl,Vr6) = (YY(n)-Z(n))*Bias ' Resulted ACF
+        TS.Cells(nl,Vr6+1) = Ys(n)           ' Resulted Error
+      Next n
+    End If
+'
+End Sub
+Sub DWLSR (Nc As Integer, Ks As Integer, Prm() As Double, _
+           ByRef X() As Double, ByRef Y() As Double, _
+           ByRef Xs() As Double, ByRef Ys() As Double)
+  Dim i,Inm, _
+      Nx  As Integer
+  Dim Det As Double
+'
+  Dim a(0 To 4) As Double
+  Dim b(0 To 2) As Double
+  Dim c(0 To 2) As Double
+'
+  Inm = UBound(X())-LBound(X())+1
+  For i = 1 To Inm
+    Nx = i
+    Call Vertors (Nx,Nc,Ks,Prm,X,Y,Ys,a,b)
+    Det  = a(0)*a(2)*a(4)+2.0*a(1)*a(2)*a(3)- _
+           a(2)^3-a(1)*a(1)*a(4)-a(0)*a(3)*a(3)
+    c(0) = b(0)*a(2)*a(4)+a(1)*b(2)*a(3)+b(1)*a(2)*a(3)- _
+           a(2)*a(2)*b(2)-a(1)*b(1)*a(4)-b(0)*a(3)*a(3)
+    c(1) = a(0)*b(1)*a(4)+b(0)*a(2)*a(3)+a(1)*a(2)*b(2)- _
+           a(2)*a(2)*b(1)-a(1)*b(0)*a(4)-a(0)*b(2)*a(3)
+    c(2) = a(0)*a(2)*b(2)+a(1)*a(2)*b(1)+b(0)*a(1)*a(3)- _
+           a(2)*a(2)*b(0)-a(1)*a(1)*b(2)-a(0)*b(1)*a(3)
+'
+    Ys(i) = (c(0)+Xs(i)*(c(1)+Xs(i)*c(2)))/Det
+  Next i
+'
+End Sub
+Sub Vertors (Mc As Integer, Nc As Integer, Ks As Integer, _
+             Prm() As Double, _
+             ByRef X() As Double, ByRef Y() As Double, _
+             ByRef Ys() As Double, _
+             ByRef a() As Double, ByRef b() As Double)
+' 1 <= Mc <= Nc
+  Dim k, _
+      kMin,kMax As Integer
+  Dim Dis, _
+      W,Wy  As Double
+'
+  a(0) = 0.0
+  a(1) = 0.0
+  a(2) = 0.0
+  a(3) = 0.0
+  a(4) = 0.0
+  If (Abs(Ys(Mc)) > Prm(3)) Then
+    a(0) = Prm(1)
+    a(1) = Mc*a(0)
+    a(2) = Mc*a(1)
+    a(3) = Mc*a(2)
+    a(4) = Mc*a(3)
+  End If
+  b(0) = 0.0
+  b(1) = 0.0
+  b(2) = 0.0
+  If (Ys(Mc) < -Prm(3)) Then
+    b(0) = -Prm(3)*a(0)
+    b(1) = -Prm(3)*a(1)
+    b(2) = -Prm(3)*a(2)
+  End If
+  If (Ys(Mc) > Prm(3)) Then
+    b(0) = Prm(3)*a(0)
+    b(1) = Prm(3)*a(1)
+    b(2) = Prm(3)*a(2)
+  End If
+'
+  kMin = Mc-Ks
+  If (kMin < 1) Then kMin = 1
+  kMax = Mc+Ks
+  If (kMax > Nc) Then kMax = Nc
+'
+  For k = kMin To kMax
+    Dis = (X(k)-X(Mc))^2
+'
+    W    = Weight(Prm(2),Dis)
+    Wy   = W*Y(k)
+    a(0) = a(0)+W
+    b(0) = b(0)+Wy
+'
+    W    = W*X(k)
+    Wy   = Wy*X(k)
+    a(1) = a(1)+W
+    b(1) = b(1)+Wy
+'
+    W    = W*X(k)
+    Wy   = Wy*X(k)
+    a(2) = a(2)+W
+    b(2) = b(2)+Wy
+'
+    W    = W*X(k)
+    a(3) = a(3)+W
+'
+    W    = W*X(k)
+    a(4) = a(4)+W
+  Next k
+'
+End Sub
+Function Weight(s,d) As Double
+  Dim st As Double
+  st = 0.1706*Exp(-9.5314*Sqrt(s))
+  Weight = st/(st*d+1.0)
+End Function
+
+'STATISTICA MACRO FILE VERSION 4
+'BEGINPROPERTIES
+'NAME=Acf_DWLS
+'DESCRIPTION=
+'LANGUAGE=0
+'ENDPROPERTIES

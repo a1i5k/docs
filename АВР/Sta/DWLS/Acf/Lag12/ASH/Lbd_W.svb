@@ -1,0 +1,80 @@
+Option Base 1
+Option Explicit
+Sub Main
+  Dim Imax,m,n,Na,Nb,Ns,Nt As Integer
+  Dim Avr,Avl,Sig,Sil      As Double
+  Dim Del,Den,Dis,Lambda,W As Double
+'
+' Object Spreadsheet
+  Dim EL   As Spreadsheet
+  Set EL = ActiveSpreadsheet
+'
+' Vars of Spreadsheet
+  Nb = 3 ' продажи
+  Na = 4 ' взвешенная оценка МО
+  Ns = 5 ' взвешенная оценка СКО
+  Nt = 6 ' пороги выбросов
+'
+  Lambda = 0.9 ' параметр взвешивания
+  Imax   = 50     ' наибольшее кол-во итераций
+  Del    = 0.001  ' критерий значимости
+'
+' Average & Std.Deviation
+  Avr = 0.0
+  Sig = 0.0
+  For n = 1 To EL.NumberOfCases
+    Avr = Avr+EL.Cells(n,Nb)
+    Sig = Sig+EL.Cells(n,Nb)*EL.Cells(n,Nb)
+  Next n
+  Avr = Avr/EL.NumberOfCases
+  Sig = Sig/EL.NumberOfCases
+  Sig = Sig-Avr*Avr
+'
+  m = 1
+  EL.Cells(m,Na) = Avr      ' выборочная оценка МО
+  EL.Cells(m,Ns) = Sqr(Sig) ' выборочная оценка СКО
+'
+' Цикл оценивания МО и СКО
+L1: m   = m+1
+    Den = 0.0
+    Avl = 0.0
+    Sil = 0.0
+    For n = 1 To EL.NumberOfCases
+      Dis = Lambda*(EL.Cells(n,Nb)-Avr)*(EL.Cells(n,Nb)-Avr)/Sig/2.0
+      If Dis>700.0 Then
+        W = 0.0
+      Else
+        W = Exp(-Dis)
+      End If
+      Den = Den+W
+      Avl = Avl+W*EL.Cells(n,Nb)
+      Sil = Sil+W*(EL.Cells(n,Nb)-Avr)*(EL.Cells(n,Nb)-Avr)
+    Next n
+' Lambda- взвешенные оценки МО и дисперсии
+    Avl = Avl/Den
+    Sil = (1.0+Lambda)*Sil/Den
+'
+' Вывод текущих оценок МО и СКО
+    EL.Cells(m,Na) = Avl
+    EL.Cells(m,Ns) = Sqr(Sil)
+'
+' Критерии продолжения оценивания
+    If ((Abs(Avl-Avr)>Del Or Abs(Sil-Sig)>Del) And m<Imax) Then
+      Avr = Avl
+      Sig = Sil
+      GoTo L1
+    End If
+'
+' Доверительные интервалы
+  EL.Cells(1,Nt) = Avl-3.0*Sqr(Sil)
+  EL.Cells(2,Nt) = Avl-2.0*Sqr(Sil)
+  EL.Cells(3,Nt) = Avl+2.0*Sqr(Sil)
+  EL.Cells(4,Nt) = Avl+3.0*Sqr(Sil)
+End Sub
+
+'STATISTICA MACRO FILE VERSION 4
+'BEGINPROPERTIES
+'NAME=Lbd_W
+'DESCRIPTION=
+'LANGUAGE=0
+'ENDPROPERTIES

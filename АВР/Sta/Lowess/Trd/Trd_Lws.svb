@@ -1,0 +1,174 @@
+'#Reference {C9E29022-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29010-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29020-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29005-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29006-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29008-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2900F-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29012-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29015-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29016-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29021-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29018-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29019-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2901A-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2901B-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2901C-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2901D-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29014-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29013-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29011-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2900D-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2900C-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2900A-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29009-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29004-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29007-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2900E-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E2900B-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29001-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29003-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+'#Reference {C9E29002-3D45-11D4-9FF4-00C04FA0D540}#1.0#0#
+Option Base 1
+Option Explicit
+'#Uses "*STB.SVX"
+'#Uses "*GRAPHICS.SVX"
+Sub Main
+  Dim Itr,Imax, _
+      n,NCas,Nri As Integer
+  Dim Vr2,Vr3,Vr4, _
+      Vr5,Vr6    As Integer
+  Dim Eps,Del, _
+      SRw,Smax, _
+      StD,StDe, _
+      Stf,Stp    As Double
+'
+  Dim X()   As Double
+  Dim Y()   As Double
+  Dim Xs()  As Double
+  Dim Ys()  As Double
+  Dim Rw()  As Double
+  Dim Res() As Double
+'
+' Object Spreadsheet
+  Dim TS   As Spreadsheet
+  Set TS = ActiveSpreadsheet
+'
+  NCas = TS.NumberOfCases
+  ReDim X(NCas)   As Double
+  ReDim Y(NCas)   As Double
+  ReDim Xs(NCas)  As Double
+  ReDim Ys(NCas)  As Double
+  ReDim Rw(NCas)  As Double
+  ReDim Res(NCas) As Double
+'
+' Initialization
+  Itr = 1
+  Vr2 = 2
+  Vr3 = 3
+  Vr4 = 4
+  Vr5 = 32
+  Vr6 = 33
+  For n = 1 To NCas
+    X(n) = n
+    Y(n) = TS.Cells(n,1)
+    Xs(n) = n
+    Ys(n) = 0.0
+    Rw(n) = 1.0
+  Next n
+'
+' Parametrs of Lowess
+  Stf  = 0.425 ' fraction of points 0.2<=Stf<=0.8
+  Stp  = 0.05 ' stiffness step
+  Smax = 0.80 ' stiffness maximum
+  Nri  = 3    ' number of the robust iterations
+  If (NCas<=100) Then
+    Del = 0.0
+  Else
+    Del = 0.015*NCas ' interquartile range
+  End If
+  LOWESS (X,Y,Stf,Nri,Del,Xs,Ys,Rw,Res)
+'
+' Output of current estimation
+  SRw = 0.0
+  StD = 0.0
+  For n = 1 To NCas
+    TS.Cells(n,Vr2) = Ys(n)
+    TS.Cells(n,Vr3) = Rw(n)
+    TS.Cells(n,Vr4) = Res(n)
+    SRw   = SRw+Rw(n)
+    StD   = StD+Rw(n)*Ys(n)*Ys(n)
+    X(n)  = n
+    Y(n)  = Res(n)
+    Xs(n) = n
+    Ys(n) = 0.0
+    Rw(n) = 1.0
+  Next n
+  StD = Sqr(StD/SRw/NCas)
+  TS.Cells(Itr,Vr5) = StD
+'
+' Estimation cicle
+  Imax = 11 ' max number of iterations
+  Eps  = 0.00001
+L1: Itr = Itr+1
+    If (Itr>Imax) Then GoTo L2
+'
+    Stf = Stf+Stp ' fraction of points 0.2<=Stf<=0.8
+    If (Stf>Smax) Then Stf = Smax
+    LOWESS (X,Y,Stf,Nri,Del,Xs,Ys,Rw,Res)
+    Vr2 = Vr2+3
+    Vr3 = Vr3+3
+    Vr4 = Vr4+3
+    If (Vr4<Vr5) Then
+      For n = 1 To NCas
+        TS.Cells(n,Vr2) = Ys(n)
+        TS.Cells(n,Vr3) = Rw(n)
+        TS.Cells(n,Vr4) = Res(n)
+      Next n
+    End If
+'
+' Continue estimation rules
+    SRw  = 0.0
+    StDe = 0.0
+    For n = 1 To NCas
+      SRw  = SRw+Rw(n)
+      StDe = StDe+Rw(n)*Ys(n)*Ys(n)
+    Next n
+    StDe = Sqr(StDe/SRw/NCas)
+    TS.Cells(Itr,Vr5) = StDe
+' Refresh Arrays
+    If (Abs(StD-StDe)>Eps*StDe) Then
+      For n = 1 To NCas
+        X(n) = n
+        Y(n) = Res(n)
+        Xs(n) = n
+        Ys(n) = 0.0
+        Rw(n) = 1.0
+      Next n
+      StD = StDe
+      GoTo L1
+    End If
+'
+L2: StD = 0.0
+  For n = 1 To NCas
+    Ys(n) = TS.Cells(n,1)-Res(n)
+    StD   = StD+Res(n)*Res(n)
+    TS.Cells(n,Vr6)   = Ys(n)  ' trend
+    TS.Cells(n,Vr6+1) = Res(n) ' seasonal
+  Next n
+  TS.Cells(1,Vr6+2) = Sqr(StD/NCas) ' std.dev of seasonal
+  StD = 0.0
+  For n = 3 To NCas
+    Y(n) = Ys(n)-2.0*Ys(n-1)+Ys(n-2) ' linear prediction error
+    StD  = StD+Y(n)*Y(n)
+  Next n
+  TS.Cells(2,Vr6+2) = Sqr(StD/(NCas-2)) ' std.dev of rofecast
+'
+End Sub
+
+'STATISTICA MACRO FILE VERSION 4
+'BEGINPROPERTIES
+'NAME=Trd_Lws
+'DESCRIPTION=
+'LANGUAGE=0
+'ENDPROPERTIES
