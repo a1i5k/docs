@@ -1,0 +1,43 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/25.0.2 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="25.0.2">
+  <diagram id="AGj8u7KbWZYXvCy549IO" name="Страница 1">
+    <mxGraphModel dx="1434" dy="844" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="sncxiXJQPQHksvNZHuuw-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="sncxiXJQPQHksvNZHuuw-1" target="sncxiXJQPQHksvNZHuuw-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sncxiXJQPQHksvNZHuuw-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="sncxiXJQPQHksvNZHuuw-1" target="sncxiXJQPQHksvNZHuuw-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sncxiXJQPQHksvNZHuuw-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="sncxiXJQPQHksvNZHuuw-1" target="sncxiXJQPQHksvNZHuuw-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sncxiXJQPQHksvNZHuuw-1" value="dbpeople.read(dbpeople.personal_data.name)&lt;br&gt;.where(dbpeople.personal_data.id=1)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="10" y="450" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sncxiXJQPQHksvNZHuuw-2" value="db.personal_data.find({_id: 1},{_id: 0, name: 1})" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="400" y="310" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sncxiXJQPQHksvNZHuuw-3" value="SELECT name FROM personal_data WHERE id = 1;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="400" y="450" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sncxiXJQPQHksvNZHuuw-4" value="MATCH (p:personal_data) WHERE p.id = 1 RETURN p.name" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="400" y="585" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VXTVyiqVhA5uHJhogQN1-1" value="MongoDB" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="445" y="280" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VXTVyiqVhA5uHJhogQN1-2" value="Cassandra" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="445" y="420" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VXTVyiqVhA5uHJhogQN1-3" value="Neo4j" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="460" y="555" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VXTVyiqVhA5uHJhogQN1-4" value="Созданный язык запросов" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="75" y="418" width="170" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
